@@ -9,4 +9,10 @@
 |9/8|Morning: Indie Project Idea / Class Time / Debugger and Git Videos|4|ToDo: Readings, Logging Activities, Git Activities, Exercise 1|
 |9/11|Got through all activities for week 2|2||
 |9/12|Completed Exercise 1 (Santa)|3|ToDo: Project statement, screen design, sign up for extra curricular|
-
+|9/20|Completed DAO Exercise|3||
+|9/21|Created ERD for Individual Project Database|1||
+|9/21|Code Review Class|2||
+|9/23|Wrote Code Review|1||
+|9/28|Webinar and Presentation|2||
+|9/28|Set Priorities and got all homework organized and tracked with an app called myHomework, my problem lately has been organization and prioritization|1||
+|9/28|Security Class|2|ToDo: Security Exercise, get caught up with individual project: Wireframe, Database, Dao Setup, start JSPs|
