@@ -1,30 +1,12 @@
-----------------------------------------
--- SQL Commands for the               --
---             SSR MySQL Database     --
--- Created By: Bo Broadway            --
--- Date:       09/29/16               --
-----------------------------------------
---
-----------------------------------------
--- CLEAN CREATE                       --
-----------------------------------------
---
 DROP DATABASE SSR;
 CREATE DATABASE SSR;
---
-----------------------------------------
--- DROP TABLES                        --
-----------------------------------------
---
+USE SSR;
+
 DROP TABLE SIGHT;
 DROP TABLE ZONE;
 DROP TABLE USER;
 DROP TABLE USER_ROLE;
---
-----------------------------------------
--- CREATE TABLE - SIGHT               --
-----------------------------------------
---
+
 CREATE TABLE SIGHT 
 	( ID	        INT(4)	    	    NOT NULL  AUTO_INCREMENT
     , ZONE_ID		INT(4)				NOT NULL
@@ -38,11 +20,7 @@ CREATE TABLE SIGHT
     , CREATED	    TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 	, PRIMARY KEY (ID)
     );
---
-----------------------------------------
--- CREATE TABLE - ZONE                --
-----------------------------------------
---
+
 CREATE TABLE ZONE
 	( ZONE_ID       INT(3)				NOT NULL  AUTO_INCREMENT
 	, EXPANSION     VARCHAR(25)			NOT NULL
@@ -50,11 +28,7 @@ CREATE TABLE ZONE
 	, NAME			VARCHAR(30)			NOT NULL
 	, PRIMARY KEY (ZONE_ID)
 	);
---
-----------------------------------------
--- CREATE TABLE - USER                --
-----------------------------------------
---
+
 CREATE TABLE USER
 	( USER_NAME     VARCHAR(25)			NOT NULL
 	, PASSWORD      VARCHAR(25)			NOT NULL
@@ -62,58 +36,36 @@ CREATE TABLE USER
 	, PIC_URL       VARCHAR(100)
 	, PRIMARY KEY (USER_NAME)
 	);
---
-----------------------------------------
--- CREATE TABLE - USER_ROLE           --
-----------------------------------------
---
+
 CREATE TABLE USER_ROLE
     ( USER_NAME		VARCHAR(25)		    NOT NULL
 	, ROLE_NAME     VARCHAR(25)         NOT NULL
 	, PRIMARY KEY (USER_NAME, ROLE_NAME)
 	);
---
-----------------------------------------
--- FOREIGN KEY - SIGHT - ZONE_ID      --
-----------------------------------------
---
+
 ALTER TABLE SIGHT
 	ADD FOREIGN KEY (ZONE_ID)
 	REFERENCES ZONE(ZONE_ID);
---
-----------------------------------------
--- FOREIGN KEY - SIGHT - USER_NAME    --
-----------------------------------------
---
+
 ALTER TABLE SIGHT
 	ADD FOREIGN KEY (USER_NAME)
 	REFERENCES USER(USER_NAME);
---
-----------------------------------------
--- TOMCAT USER                        --
-----------------------------------------
---
+
 CREATE USER 'tomcat'@'localhost' IDENTIFIED BY 'tomcat';
 GRANT SELECT ON SSR.* TO 'tomcat'@'localhost';
---
---------------------------------------------------------------------------------
---                                TABLE DATA                                  --
---------------------------------------------------------------------------------
--- ZONE DATA                          --
-----------------------------------------
---
+
 INSERT INTO ZONE ( EXPANSION
                  , REGION
 				 , NAME)
 		  VALUES ( 'A Realm Reborn'
 				 , 'Thanalan'
-				 , 'Ul\'dah - Steps of Nald');
+				 , "Ul'dah - Steps of Nald");
 INSERT INTO ZONE ( EXPANSION
                  , REGION
 				 , NAME)
 		  VALUES ( 'A Realm Reborn'
 				 , 'Thanalan'
-				 , 'Ul\'dah - Steps of Thal');
+				 , "Ul'dah - Steps of Thal");
 INSERT INTO ZONE ( EXPANSION
                  , REGION
 				 , NAME)
@@ -257,7 +209,7 @@ INSERT INTO ZONE ( EXPANSION
 				 , NAME)
 		  VALUES ( 'A Realm Reborn'
 				 , 'La Noscea'
-				 , 'The Wolve\'s Den');
+				 , "The Wolves' Den");
 INSERT INTO ZONE ( EXPANSION
                  , REGION
 				 , NAME)
@@ -324,20 +276,11 @@ INSERT INTO ZONE ( EXPANSION
 		  VALUES ( 'Heavensward'
 				 , 'Abalathia'
 				 , 'Azys Lla');
---
-----------------------------------------
--- INITIAL USER DATA                  --
-----------------------------------------
---
+
 INSERT INTO USER ( USER_NAME, PASSWORD ) VALUES ('admin', 'iamadmin');
 INSERT INTO USER ( USER_NAME, PASSWORD ) VALUES ('bo', 'iambo');
---
-----------------------------------------
--- INITIAL USER_ROLE DATA             --
-----------------------------------------
---
+
 INSERT INTO USER_ROLE VALUES ('admin', 'admin');
 INSERT INTO USER_ROLE VALUES ('admin', 'registeredUser');
 INSERT INTO USER_ROLE VALUES ('bo', 'registeredUser');
---
 	
