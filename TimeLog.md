@@ -16,3 +16,5 @@
 |9/28|Webinar and Presentation|2||
 |9/28|Set Priorities and got all homework organized and tracked with an app called myHomework, my problem lately has been organization and prioritization|1||
 |9/28|Security Class|2|ToDo: Security Exercise, get caught up with individual project: Wireframe, Database, Dao Setup, start JSPs|
+|10/1|Made screen mockups|2||
+|10/2|Created maven project for SightseeingReborn|1||
