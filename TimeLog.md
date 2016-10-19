@@ -18,3 +18,7 @@
 |9/28|Security Class|2|ToDo: Security Exercise, get caught up with individual project: Wireframe, Database, Dao Setup, start JSPs|
 |10/1|Made screen mockups|2||
 |10/2|Created maven project for SightseeingReborn|1||
+|10/7|Week 6 - Activity 2|1||
+|10/10|Created base JSPs - Got Website "running"|3||
+|10/11|Finish SOAP Activities|2||
+|10/17|Finished my first part of the Team Project for Week 7 Exercise|4||

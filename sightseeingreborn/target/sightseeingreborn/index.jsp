@@ -12,12 +12,12 @@
 
 <div>
 
-    <h1>welcome to sightseeing reborn</h1>
+    <h3>welcome to sightseeing reborn</h3>
     <p>lorem ipsum dolor sit amet consectetuer augue quis vitae dictumst proin. velit felis phasellus ac pretium sed in est ac tempor velit. mauris id ac laoreet nisl tincidunt ullamcorper vivamus turpis tristique lacus.</p>
     <p>sem congue eros felis ornare aenean auctor elit nunc pede orci. vivamus id ligula dui nibh nam at vestibulum urna ac in. </p>
     <br />
 
-    <h1>our services</h1>
+    <h3>our services</h3>
     <p>lorem ipsum dolor sit amet consectetuer augue quis vitae dictumst proin. velit felis phasellus ac pretium sed in est ac tempor velit.</p>
     <p>mauris id ac laoreet nisl tincidunt ullamcorper vivamus turpis tristique lacus. pellentesque sed gravida quis curabitur curabitur metus sed elit elit est. facilisi sit tellus libero nisl adipiscing ut justo hendrerit in congue. tristique id sagittis sem pretium ut.</p>
     <ul>
