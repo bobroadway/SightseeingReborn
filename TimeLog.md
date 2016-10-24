@@ -22,3 +22,4 @@
 |10/10|Created base JSPs - Got Website "running"|3||
 |10/11|Finish SOAP Activities|2||
 |10/17|Finished my first part of the Team Project for Week 7 Exercise|4||
+|10/22|Presentation Feedback and Finishded Code Reviews|1||
