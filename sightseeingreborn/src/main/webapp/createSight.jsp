@@ -91,9 +91,9 @@
             <tr>
                 <td>Coordinates</td>
                 <td>
-                    <input type="text" name="x_cord" id="x_cord" value="x" />
-                    <input type="text" name="y_cord" id="y_cord" value="y" />
-                    <input type="text" name="z_cord" id="z_cord" value="z" />
+                    <input type="text" name="cord_x" id="cord_x" value="x" />
+                    <input type="text" name="cord_y" id="cord_y" value="y" />
+                    <input type="text" name="cord_z" id="cord_z" value="z" />
                 </td>
             </tr>
             <tr>
