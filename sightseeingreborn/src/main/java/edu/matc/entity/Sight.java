@@ -66,16 +66,12 @@ public class Sight {
      * @param userName    userName for sight uploader
      * @param created     creation timestamp
      */
-    public Sight(Integer zoneId, String name, String description, Integer cordX, Integer cordY, Integer cordZ, String ssUrl, String userName, LocalDate created) {
+    public Sight(Integer zoneId, String name, Integer cordX, Integer cordY, String userName) {
         this.zoneId = zoneId;
         this.name = name;
-        this.description = description;
         this.cordX = cordX;
         this.cordY = cordY;
-        this.cordZ = cordZ;
-        this.ssUrl = ssUrl;
         this.userName = userName;
-        this.created = created;
     }
 
     public Integer getId() {
