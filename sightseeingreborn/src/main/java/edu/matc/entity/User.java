@@ -37,14 +37,10 @@ public class User {
      *
      * @param userName  the user_name, primary key
      * @param password   the password
-     * @param created    creation timestamp
-     * @param picUrl    url to screenshot
      */
-    public User(String userName, String password, LocalDate created, String picUrl) {
+    public User(String userName, String password) {
         this.userName = userName;
         this.password = password;
-        this.created = created;
-        this.picUrl = picUrl;
     }
 
     public String getUserName() {

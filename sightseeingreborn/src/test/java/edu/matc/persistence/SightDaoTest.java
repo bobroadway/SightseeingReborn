@@ -2,14 +2,9 @@ package edu.matc.persistence;
 
 import edu.matc.entity.Sight;
 import org.apache.log4j.Logger;
-import org.hibernate.Session;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import javax.transaction.Transactional;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -18,17 +13,21 @@ import static org.junit.Assert.*;
  * Created by Bo on 10/29/2016.
  */
 public class SightDaoTest {
-
     private final Logger log = Logger.getLogger(this.getClass());
 
     SightDao dao;
     Sight sight;
-    Sight sightToDelete;
+    Integer sightId01;
+    Integer sightId02;
+    Integer sightId03;
 
     @Before
     public void setup() {
         dao = new SightDao();
-        sight = new Sight();
+        sight = new Sight(1, "Test Sight", 1, 1, "admin");
+        sightId01 = dao.addSight(sight);
+        sightId02 = dao.addSight(sight);
+        sightId03 = dao.addSight(sight);
 
     }
 
@@ -40,18 +39,15 @@ public class SightDaoTest {
 
     @Test
     public void getSight() throws Exception {
-        sight = dao.getSight(1);
+        sight = dao.getSight(sightId01);
         assertEquals("Test Sight", sight.getName());
     }
 
     @Test
     public void addSight() throws Exception {
-        sight.setZoneId(23);
-        sight.setName("Test Sight");
-        sight.setCordX(10);
-        sight.setCordY(10);
-        sight.setUserName("admin");
-        assertEquals(Integer.valueOf(1), dao.addSight(sight));
+        Integer testId = dao.addSight(sight);
+        assertEquals(sight.getName(), dao.getSight(testId).getName());
+        dao.deleteSight(testId);
     }
 
     @Test
@@ -67,12 +63,12 @@ public class SightDaoTest {
 
     @Test
     public void updateSight() throws Exception {
-        Sight sightToUpdate = dao.getSight(1);
+        Sight sightToUpdate = dao.getSight(sightId02);
         Integer originalCordX = sightToUpdate.getCordX();
         assertNotEquals(new Integer(20), originalCordX);
         sightToUpdate.setCordX(20);
         dao.updateSight(sightToUpdate);
-        assertEquals(new Integer(20), dao.getSight(1).getCordX());
+        assertEquals(new Integer(20), dao.getSight(sightId02).getCordX());
 
         sightToUpdate.setCordX(originalCordX);
         dao.updateSight(sightToUpdate);
@@ -80,7 +76,9 @@ public class SightDaoTest {
 
     @After
     public void cleanUp() {
-        // clean up
+        dao.deleteSight(sightId01);
+        dao.deleteSight(sightId02);
+        dao.deleteSight(sightId03);
     }
 
 }
