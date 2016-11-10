@@ -9,4 +9,7 @@
 <div>
     <input type="text" name="username" value="username" />
     <input type="text" name="password" value="password" />
+    <button>Log In</button>
+    <br />
+    <a hrer="createUser.jsp">Create Login</a>
 </div>

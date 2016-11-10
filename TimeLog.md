@@ -22,6 +22,12 @@
 |10/10|Created base JSPs - Got Website "running"|3||
 |10/11|Finish SOAP Activities|2||
 |10/17|Finished my first part of the Team Project for Week 7 Exercise|4||
-|10/22|Presentation Feedback and Finishded Code Reviews|1||
+|10/22|Presentation Feedback and Finished Code Reviews|1||
 |10/23|Finish creating all necessary JSPs (that I know of)|1||
 |10/24|Completed all Table Classes|2||
+|10/26|Incorporated use of mock json file in Team Project|3||
+|10/30|Completed DAOs|2||
+|10/31|Completed Unit Testing on DAOs|3||
+|11/3|Wrote code to implement use of igdb api on Team Project|4||
+|11/7|Incorporate Properties files on Team Project|3||
+|11/8|Did MultiThreading exercise|4||
