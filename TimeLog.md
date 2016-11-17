@@ -31,3 +31,5 @@
 |11/3|Wrote code to implement use of igdb api on Team Project|4||
 |11/7|Incorporate Properties files on Team Project|3||
 |11/8|Did MultiThreading exercise|4||
+|11/12|Updated Team Project to include the random game response functionality|2||
+|11/15|Communications for Team Project final troubleshootings and presentation planning.|2||
