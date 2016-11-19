@@ -8,13 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html">About Us</a></li>
-        <li><a href="index.html">Products</a></li>
-        <li><a href="index.html">Services</a></li>
-        <li><a href="index.html">Price Guide</a></li>
-        <li><a href="index.html">Locations</a></li>
-        <li><a href="index.html">Contact Us</a></li>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/addSight">Add a Sight</a></li>
     </ul>
     <br /><br />
 </div>

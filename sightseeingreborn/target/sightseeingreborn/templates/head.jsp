@@ -7,5 +7,5 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <head>
-    <title>sightseeing reborn</title>
+    <title><c:out value="${title}" default="Sightseeing Reborn" /></title>
 </head>

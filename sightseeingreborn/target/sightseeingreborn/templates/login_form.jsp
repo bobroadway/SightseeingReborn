@@ -11,5 +11,5 @@
     <input type="text" name="password" value="password" />
     <button>Log In</button>
     <br />
-    <a hrer="createUser.jsp">Create Login</a>
+    <a href="/createUser">Create Login</a>
 </div>

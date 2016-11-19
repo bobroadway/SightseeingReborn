@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 
 <%@ include file="templates/head.jsp" %>
@@ -8,6 +10,7 @@
 
 <div>
     <h2>sightseeing reborn</h2>
+    <h3>${test}</h3>
 </div>
 
 <div>
