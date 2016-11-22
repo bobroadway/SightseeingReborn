@@ -8,30 +8,31 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <%@ include file="templates/head.jsp" %>
-<body>
+<body class="container-fluid">
 <%@ include file="templates/header.jsp" %>
 <%@ include file="templates/navigation.jsp" %>
 
-<div>
-    <h3>Create Login</h3>
+<div class="container-fluid">
+    <h3 class="sectionTitle">Create Login</h3>
 </div>
 
-<div>
-    <form id="createUser" action="" method="post">
+<div class="container-fluid">
+    <form class="form-horizontal" id="createUser" action="" method="post">
 
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username" />
-        <br />
+        <div class="form-group">
+            <label class="sr-only" for="username">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="confirmPassword">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+        </div>
 
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" />
-        <br />
-
-        <label for="confirmPassword">Confirm Password</label>
-        <input type="password" name="confirmPassword" id="confirmPassword" />
-        <br />
-
-        <button>Create</button>
+        <button type="submit" class="btn btn-default">Create</button>
 
     </form>
 </div>

@@ -34,3 +34,5 @@
 |11/12|Updated Team Project to include the random game response functionality|2||
 |11/15|Communications for Team Project final troubleshootings and presentation planning.|2||
 |11/18|Add controllers for all my jsps|2||
+|11/19|Create page logo for Individual Project|1||
+|11/21|Bootstrapify Individual Project|4||

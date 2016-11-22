@@ -4,32 +4,50 @@
 
 <%@ include file="templates/head.jsp" %>
 
-<body>
+<body class="container-fluid">
 <%@ include file="templates/header.jsp" %>
 <%@ include file="templates/navigation.jsp" %>
 
-<div>
-    <h2>sightseeing reborn</h2>
-    <h3>${test}</h3>
-</div>
+<div class="container-fluid">
 
-<div>
+    <h3>The Sights of Eorzea</h3>
+    <table class="table table-striped">
+        <tr>
+            <th>Date Added</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Zone</th>
+            <th>Coordinates</th>
+            <th>Screenshot</th>
+        </tr>
+        <tr>
+            <td>9/24/2016</td>
+            <td>Fake Sight</td>
+            <td>Super fake description. Like why are you even reading this it is SO incredibly fake.</td>
+            <td>Fake Zone</td>
+            <td>X: 10, Y: 10, Z: 10</td>
+            <td><img class="preview" src="images/previewUnavailable.png" alt="Preview Unavailable"></td>
+        </tr>
+        <tr>
+            <td>9/24/2016</td>
+            <td>Fake Sight</td>
+            <td>Super fake description. Like why are you even reading this it is SO incredibly fake.</td>
+            <td>Fake Zone</td>
+            <td>X: 10, Y: 10, Z: 10</td>
+            <td><img class="preview" src="images/previewUnavailable.png" alt="Preview Unavailable"></td>
+        </tr>
+        <tr>
+            <td>9/24/2016</td>
+            <td>Fake Sight</td>
+            <td>Super fake description. Like why are you even reading this it is SO incredibly fake.</td>
+            <td>Fake Zone</td>
+            <td>X: 10, Y: 10, Z: 10</td>
+            <td><img class="preview" src="images/previewUnavailable.png" alt="Preview Unavailable"></td>
+        </tr>
 
-    <h3>welcome to sightseeing reborn</h3>
-    <p>lorem ipsum dolor sit amet consectetuer augue quis vitae dictumst proin. velit felis phasellus ac pretium sed in est ac tempor velit. mauris id ac laoreet nisl tincidunt ullamcorper vivamus turpis tristique lacus.</p>
-    <p>sem congue eros felis ornare aenean auctor elit nunc pede orci. vivamus id ligula dui nibh nam at vestibulum urna ac in. </p>
-    <br />
 
-    <h3>our services</h3>
-    <p>lorem ipsum dolor sit amet consectetuer augue quis vitae dictumst proin. velit felis phasellus ac pretium sed in est ac tempor velit.</p>
-    <p>mauris id ac laoreet nisl tincidunt ullamcorper vivamus turpis tristique lacus. pellentesque sed gravida quis curabitur curabitur metus sed elit elit est. facilisi sit tellus libero nisl adipiscing ut justo hendrerit in congue. tristique id sagittis sem pretium ut.</p>
-    <ul>
-        <li>ullamcorper vivamus turpis tristique</li>
-        <li>consectetuer augue quis vitae dictumst proin</li>
-        <li>lorem ipsum dolor</li>
-        <li>velit felis phasellus ac pretium</li>
-    </ul>
-    <p>mauris id ac laoreet nisl tincidunt ullamcorper vivamus turpis tristique lacus. pellentesque sed gravida quis curabitur curabitur metus sed elit elit est. facilisi sit tellus libero nisl adipiscing ut justo hendrerit in congue. tristique id sagittis sem pretium ut.</p>
+    </table>
+
 
 </div>
 <%@ include file="templates/footer.jsp" %>

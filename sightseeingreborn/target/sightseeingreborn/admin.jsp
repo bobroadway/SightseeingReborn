@@ -8,7 +8,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <%@ include file="templates/head.jsp" %>
-<body>
+<body class="container-fluid">
     <h2>This is the Admin Page, only viewable by an admin.</h2>
+
+<%@ include file="templates/footer.jsp" %>
 </body>
 </html>
