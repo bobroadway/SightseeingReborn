@@ -11,7 +11,6 @@
         <img src="images/logo.png" alt="Sightseeing Reborn Logo" id="logo" />
     </div>
     <div id="welcomeDiv">
-        <%@ include file="login_form.jsp" %>
-        <!-- <%@ include file="welcome_message.jsp" %> -->
+        <%@ include file="welcome.jsp" %>
     </div>
 </div>

@@ -7,5 +7,5 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="container-fluid">
-    <h3>Welcome, User!</h3>
+    <h3>Welcome, <c:out value="${pageContext.request.getUserPrincipal()}" default="Sightseeing Reborn" />!</h3>
 </div>

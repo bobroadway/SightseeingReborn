@@ -7,14 +7,14 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="container-fluid">
-  <form class="form-inline">
+  <form class="form-inline" action="j_security_check" method="post">
       <div class="form-group">
-          <label class="sr-only" for="username">Username</label>
-          <input type="text" class="form-control" id="username" placeholder="Username">
+          <label class="sr-only" for="j_username">Username</label>
+          <input type="text" class="form-control" id="j_username" name="j_username" placeholder="Username">
       </div>
       <div class="form-group">
-          <label class="sr-only" for="password">Password</label>
-          <input type="password" class="form-control" id="password" placeholder="Password">
+          <label class="sr-only" for="j_password">Password</label>
+          <input type="password" class="form-control" id="j_password" name="j_password" placeholder="Password">
       </div>
       <button type="submit" class="btn btn-default">Log in</button>
     <br />

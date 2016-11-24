@@ -44,12 +44,10 @@
             <td>X: 10, Y: 10, Z: 10</td>
             <td><img class="preview" src="images/previewUnavailable.png" alt="Preview Unavailable"></td>
         </tr>
-
-
     </table>
 
-
 </div>
+
 <%@ include file="templates/footer.jsp" %>
 </body>
 </html>

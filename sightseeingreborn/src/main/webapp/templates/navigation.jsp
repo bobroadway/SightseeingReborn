@@ -11,7 +11,9 @@
         <ul>
             <a class="navbar-brand" href="/home">Home</a>
             <ul class="nav navbar-nav">
-                <li><a href="/addSight">Add Sight</a></li>
+                <c:if test="${pageContext.request.isUserInRole('registeredUser')}">
+                    <li><a href="/addSight">Add Sight</a></li>
+                </c:if>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">External Links <span class="caret"></span></a>
                     <ul class="dropdown-menu">
