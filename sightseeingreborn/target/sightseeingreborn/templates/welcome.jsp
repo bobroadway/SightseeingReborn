@@ -9,5 +9,3 @@
     </c:otherwise>
 
 </c:choose>
-
-<!-- <%@ include file="login_error.jsp"     %> -->
