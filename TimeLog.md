@@ -36,3 +36,4 @@
 |11/18|Add controllers for all my jsps|2||
 |11/19|Create page logo for Individual Project|1||
 |11/21|Bootstrapify Individual Project|4||
+|11/24|Full functioning authentication|4||

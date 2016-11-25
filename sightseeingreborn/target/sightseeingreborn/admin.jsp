@@ -10,7 +10,7 @@
 <%@ include file="templates/head.jsp" %>
 <body class="container-fluid">
     <h2>This is the Admin Page, only viewable by an admin.</h2>
-
+    <a href="/home">Home</a>
 <%@ include file="templates/footer.jsp" %>
 </body>
 </html>

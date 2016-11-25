@@ -5,7 +5,7 @@
     </c:when>
 
     <c:otherwise>
-        <%@ include file="login_form.jsp"      %>
+        <%@ include file="login_form.jsp" %>
     </c:otherwise>
 
 </c:choose>

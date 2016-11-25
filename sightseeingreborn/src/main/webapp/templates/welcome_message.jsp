@@ -7,5 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="container-fluid">
-    <h3>Welcome, <c:out value="${pageContext.request.getUserPrincipal()}" default="Sightseeing Reborn" />!</h3>
+    <h3>Welcome, <c:out value="${pageContext.request.getUserPrincipal().getName()}" default="Sightseeing Reborn" />!</h3>
+    <a href="/logOut">Log Out</a>
 </div>

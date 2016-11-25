@@ -12,7 +12,18 @@
 </head>
 <body>
 <div class="container-fluid">
-     <%@ include file="templates/login_form.jsp" %>
+    <h3>You need to log in for that.</h3>
+    <form class="form-inline" action="j_security_check" method="post">
+        <div class="form-group">
+            <label class="sr-only" for="j_username">Username</label>
+            <input type="text" class="form-control" id="j_username" name="j_username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="j_password">Password</label>
+            <input type="password" class="form-control" id="j_password" name="j_password" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-default">Log in</button>
+    </form>
 </div>
 </body>
 </html>
