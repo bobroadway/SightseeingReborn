@@ -95,7 +95,7 @@ INSERT INTO ZONE ( EXPANSION
 				 , NAME)
 		  VALUES ( 'A Realm Reborn'
 				 , 'Thanalan'
-				 , 'Sounthern Thanalan');
+				 , 'Southern Thanalan');
 INSERT INTO ZONE ( EXPANSION
                  , REGION
 				 , NAME)

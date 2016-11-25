@@ -2,37 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3529ec25-f7a8-4a42-a43a-c4512afa9756" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/controller/LogIn.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/edu/matc/persistence/AddSightController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/edu/matc/persistence/AdminController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/edu/matc/persistence/CreateUserController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/edu/matc/persistence/HomeController.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn.war" afterPath="$PROJECT_DIR$/target/sightseeingreborn.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyAppLog.log" afterPath="$PROJECT_DIR$/MyAppLog.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/login_error.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/login_error.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/templates/login_form.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/templates/login_form.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/templates/welcome.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/templates/welcome.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/templates/welcome_message.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/templates/welcome_message.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/sightseeingreborn/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/META-INF/maven/edu.matc.sightseeingreborn/sightseeingreborn/pom.properties" afterPath="$PROJECT_DIR$/target/sightseeingreborn/META-INF/maven/edu.matc.sightseeingreborn/sightseeingreborn/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/admin.jsp" afterPath="$PROJECT_DIR$/target/sightseeingreborn/admin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/login.jsp" afterPath="$PROJECT_DIR$/target/sightseeingreborn/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/login_error.jsp" afterPath="$PROJECT_DIR$/target/sightseeingreborn/login_error.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/templates/login_form.jsp" afterPath="$PROJECT_DIR$/target/sightseeingreborn/templates/login_form.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/templates/welcome.jsp" afterPath="$PROJECT_DIR$/target/sightseeingreborn/templates/welcome.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/templates/welcome_message.jsp" afterPath="$PROJECT_DIR$/target/sightseeingreborn/templates/welcome_message.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.SightDaoTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.SightDaoTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.UserDaoTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.UserDaoTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.ZoneDaoTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.ZoneDaoTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/edu.matc.persistence.SightDaoTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.matc.persistence.SightDaoTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/edu.matc.persistence.UserDaoTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.matc.persistence.UserDaoTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/edu.matc.persistence.ZoneDaoTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.matc.persistence.ZoneDaoTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../DesignDocuments/database/SSR_DDL.sql" afterPath="$PROJECT_DIR$/../DesignDocuments/database/SSR_DDL.sql" />
     </list>
     <ignored path="sightseeingreborn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,7 +60,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-              <folding />
+              <folding>
+                <marker date="1480033348810" expanded="true" signature="9:244" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1193,7 +1165,7 @@
       <workItem from="1478739478192" duration="652000" />
       <workItem from="1478968252563" duration="26000" />
       <workItem from="1479516313132" duration="25712000" />
-      <workItem from="1480016373168" duration="14043000" />
+      <workItem from="1480016373168" duration="14466000" />
     </task>
     <servers />
   </component>
@@ -1230,10 +1202,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72750000" />
+    <option name="totallyTimeSpent" value="73173000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1730,7 +1702,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding />
+          <folding>
+            <marker date="1480033348810" expanded="true" signature="9:244" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
