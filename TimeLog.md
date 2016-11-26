@@ -37,3 +37,4 @@
 |11/19|Create page logo for Individual Project|1||
 |11/21|Bootstrapify Individual Project|4||
 |11/24|Full functioning authentication|4||
+|11/25|Home page now desplays 5 test "sights" from database|2||
