@@ -1,5 +1,7 @@
 package edu.matc.controller;
 
+import edu.matc.entity.Sight;
+import edu.matc.persistence.SightDao;
 import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
@@ -9,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Home page controller.
@@ -35,6 +38,13 @@ public class HomeController extends HttpServlet {
 
         // set title
         request.setAttribute("title", "Sightseeing Reborn - Home");
+
+        // get sights
+        SightDao dao = new SightDao();
+        List<Sight> allSights = dao.getAllSights();
+
+        // place allSights into request
+        request.setAttribute("allSights", allSights);
 
         // forward to index.jsp
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
