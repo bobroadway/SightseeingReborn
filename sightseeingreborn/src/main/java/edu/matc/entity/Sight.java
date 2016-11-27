@@ -1,10 +1,10 @@
 package edu.matc.entity;
 
-import edu.matc.util.LocalDateAttributeConverter;
+import edu.matc.util.LocalDateTimeAttributeConverter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * Created by Bo on 10/2/2016.
@@ -18,9 +18,6 @@ public class Sight {
     @GenericGenerator(name="increment", strategy = "increment")
     @Column(name = "id")
     private Integer id;
-
-    @Column(name = "zone_id")
-    private Integer zoneId;
 
     @Column(name = "name")
     private String name;
@@ -44,8 +41,12 @@ public class Sight {
     private String userName;
 
     @Column(name = "created")
-    @Convert(converter = LocalDateAttributeConverter.class)
-    private LocalDate created;
+    @Convert(converter = LocalDateTimeAttributeConverter.class)
+    private LocalDateTime created;
+
+    @ManyToOne(fetch=FetchType.EAGER)
+    @JoinColumn(name="zone_id")
+    private Zone zone;
 
     /**
      * Instantiates a new User.
@@ -56,18 +57,14 @@ public class Sight {
     /**
      * Instantiates a new User.
      *
-     * @param zoneId      the id of the sight zone
+     * @param zone        the zone of the sight
      * @param name        name of the sight
-     * @param description description of the sight
      * @param cordX       x coordinates of the sight
      * @param cordY       y coordinates of the sight
-     * @param cordZ       z coordinates of the sight
-     * @param ssUrl       url for optional screenshot
      * @param userName    userName for sight uploader
-     * @param created     creation timestamp
      */
-    public Sight(Integer zoneId, String name, Integer cordX, Integer cordY, String userName) {
-        this.zoneId = zoneId;
+    public Sight(Zone zone, String name, Integer cordX, Integer cordY, String userName) {
+        this.zone = zone;
         this.name = name;
         this.cordX = cordX;
         this.cordY = cordY;
@@ -76,10 +73,6 @@ public class Sight {
 
     public Integer getId() {
         return id;
-    }
-
-    public Integer getZoneId() {
-        return zoneId;
     }
 
     public String getName() {
@@ -110,16 +103,12 @@ public class Sight {
         return userName;
     }
 
-    public LocalDate getCreated() {
-        return created;
-    }
+    public LocalDateTime getCreated() { return created; }
+
+    public Zone getZone() { return zone; }
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public void setZoneId(Integer zoneId) {
-        this.zoneId = zoneId;
     }
 
     public void setName(String name) {
@@ -150,15 +139,16 @@ public class Sight {
         this.userName = userName;
     }
 
-    public void setCreated(LocalDate created) {
+    public void setCreated(LocalDateTime created) {
         this.created = created;
     }
+
+    public void setZone(Zone zone) { this.zone = zone; }
 
     @Override
     public String toString() {
         return "Sight{" +
                 "id=" + id +
-                ", zoneId=" + zoneId +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", cordX=" + cordX +
@@ -169,4 +159,9 @@ public class Sight {
                 ", created=" + created +
                 '}';
     }
+
+//    public String formattedDate() {
+//
+//        return this.created.format(formatter);
+//    }
 }

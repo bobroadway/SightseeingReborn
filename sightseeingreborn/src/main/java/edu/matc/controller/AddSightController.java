@@ -1,5 +1,7 @@
 package edu.matc.controller;
 
+import edu.matc.entity.Zone;
+import edu.matc.persistence.ZoneDao;
 import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
@@ -9,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Add Sight page controller.
@@ -35,6 +38,13 @@ public class AddSightController extends HttpServlet {
 
         // set title
         request.setAttribute("title", "Add a Sight");
+
+        // get zones
+        ZoneDao zoneDao = new ZoneDao();
+        List<Zone> allZones = zoneDao.getAllZones();
+
+        // place allZones into request
+        request.setAttribute("allZones", allZones);
 
         // forward to index.jsp
         RequestDispatcher dispatcher = request.getRequestDispatcher("/addSight.jsp");

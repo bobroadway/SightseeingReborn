@@ -1,9 +1,10 @@
 package edu.matc.entity;
 
-import edu.matc.util.LocalDateAttributeConverter;
+import edu.matc.util.LocalDateTimeAttributeConverter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * Created by Bo on 10/2/2016.
@@ -20,8 +21,8 @@ public class User {
     private String password;
 
     @Column(name = "created")
-    @Convert(converter = LocalDateAttributeConverter.class)
-    private LocalDate created;
+    @Convert(converter = LocalDateTimeAttributeConverter.class)
+    private LocalDateTime created;
 
     @Column(name = "pic_url")
     private String picUrl;
@@ -51,7 +52,7 @@ public class User {
         return password;
     }
 
-    public LocalDate getCreated() {
+    public LocalDateTime getCreated() {
         return created;
     }
 
@@ -67,7 +68,7 @@ public class User {
         this.password = password;
     }
 
-    public void setCreated(LocalDate created) {
+    public void setCreated(LocalDateTime created) {
         this.created = created;
     }
 

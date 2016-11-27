@@ -22,11 +22,26 @@
         </tr>
         <c:forEach var="sight" items="${allSights}">
             <tr>
-                <td>${sight.created}</td>
+                <td>
+                    ${sight.created.getMonthValue()}/${sight.created.getDayOfMonth()}/${sight.created.getYear()}<br />
+                    <span class="small">at ${sight.created.getHour()}:${sight.created.getMinute()}</span><br />
+                    <span class="text-muted small">by ${sight.userName}</span>
+                </td>
                 <td>${sight.name}</td>
                 <td>${sight.description}</td>
-                <td>${sight.zoneId}</td>
-                <td>X: ${sight.cordX}, Y: ${sight.cordY}, Z: ${sight.cordZ}</td>
+                <td>
+                    ${sight.zone.name}<br />
+                    <span class="text-muted small">${sight.zone.region}<br />
+                    <span class="text-muted small">(${sight.zone.expansion})</span>
+                    </span>
+                </td>
+                <td>
+                    X: ${sight.cordX}<br />
+                    Y: ${sight.cordY}<br />
+                    <c:if test="${not empty sight.cordZ}">
+                        Z: ${sight.cordZ}
+                    </c:if>
+                </td>
                 <td><img class="preview" src="uploads/${sight.ssUrl}" alt="Image for Sight ${sight.id}"></td>
             </tr>
         </c:forEach>

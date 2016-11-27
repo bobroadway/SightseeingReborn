@@ -2,6 +2,7 @@ package edu.matc.controller;
 
 import edu.matc.entity.Sight;
 import edu.matc.persistence.SightDao;
+import edu.matc.persistence.ZoneDao;
 import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
@@ -34,14 +35,14 @@ public class HomeController extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        log.info("In Home doGet method.");
+        log.info("In Home doGet method");
 
         // set title
         request.setAttribute("title", "Sightseeing Reborn - Home");
 
         // get sights
-        SightDao dao = new SightDao();
-        List<Sight> allSights = dao.getAllSights();
+        SightDao sightDao = new SightDao();
+        List<Sight> allSights = sightDao.getAllSights();
 
         // place allSights into request
         request.setAttribute("allSights", allSights);

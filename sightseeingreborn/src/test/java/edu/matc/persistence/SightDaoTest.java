@@ -1,6 +1,7 @@
 package edu.matc.persistence;
 
 import edu.matc.entity.Sight;
+import edu.matc.entity.Zone;
 import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
@@ -15,7 +16,9 @@ import static org.junit.Assert.*;
 public class SightDaoTest {
     private final Logger log = Logger.getLogger(this.getClass());
 
+    ZoneDao zoneDao;
     SightDao dao;
+    Zone zone;
     Sight sight;
     Integer sightId01;
     Integer sightId02;
@@ -23,8 +26,10 @@ public class SightDaoTest {
 
     @Before
     public void setup() {
+        zoneDao = new ZoneDao();
         dao = new SightDao();
-        sight = new Sight(1, "Test Sight", 1, 1, "admin");
+        zone = zoneDao.getZone(1);
+        sight = new Sight(zone, "Test Sight", 1, 1, "admin");
         sightId01 = dao.addSight(sight);
         sightId02 = dao.addSight(sight);
         sightId03 = dao.addSight(sight);
@@ -41,6 +46,7 @@ public class SightDaoTest {
     public void getSight() throws Exception {
         sight = dao.getSight(sightId01);
         assertEquals("Test Sight", sight.getName());
+        assertEquals("Ul'dah - Steps of Nald", sight.getZone().getName());
     }
 
     @Test
@@ -52,7 +58,7 @@ public class SightDaoTest {
 
     @Test
     public void deleteSight() {
-        Sight sightToDelete = new Sight(1, "Delete Sight", 1, 1, "admin");
+        Sight sightToDelete = new Sight(zone, "Delete Sight", 1, 1, "admin");
 
         Integer newId = dao.addSight(sightToDelete);
         assertNotNull(newId);
