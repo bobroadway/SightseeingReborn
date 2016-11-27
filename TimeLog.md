@@ -38,3 +38,4 @@
 |11/21|Bootstrapify Individual Project|4||
 |11/24|Full functioning authentication|4||
 |11/25|Home page now desplays 5 test "sights" from database|2||
+|11/26|Fully format display of index.jsp, further implementing all "select all" functionality|4|Next: "Add Sight" functionality|
