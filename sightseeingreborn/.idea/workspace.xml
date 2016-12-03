@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3529ec25-f7a8-4a42-a43a-c4512afa9756" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/edu/matc/controller/LogIn.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyAppLog.log" afterPath="$PROJECT_DIR$/MyAppLog.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/controller/AdminController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/controller/AdminController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/createUser.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/createUser.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/style/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/style/style.css" />
-    </list>
+    <list default="true" id="3529ec25-f7a8-4a42-a43a-c4512afa9756" name="Default" comment="" />
     <ignored path="sightseeingreborn.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -1183,7 +1176,7 @@
       <workItem from="1480016373168" duration="19279000" />
       <workItem from="1480271123749" duration="5027000" />
       <workItem from="1480280038368" duration="7235000" />
-      <workItem from="1480553084394" duration="7988000" />
+      <workItem from="1480553084394" duration="8212000" />
     </task>
     <servers />
   </component>
@@ -1220,7 +1213,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98236000" />
+    <option name="totallyTimeSpent" value="98460000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="745" extended-state="0" />
