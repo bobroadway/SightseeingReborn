@@ -17,19 +17,19 @@
 </div>
 
 <div class="container-fluid">
-    <form class="form-horizontal" id="createUser" action="" method="post">
+    <form class="form-horizontal" id="addUser" action="/addUser" method="post">
 
         <div class="form-group">
             <label class="sr-only" for="username">Username</label>
-            <input type="text" class="form-control" id="username" placeholder="Username">
+            <input type="text" class="form-control" id="username" name="username" placeholder="Username">
         </div>
         <div class="form-group">
             <label class="sr-only" for="password">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
         </div>
         <div class="form-group">
             <label class="sr-only" for="confirmPassword">Confirm Password</label>
-            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
         </div>
 
         <button type="submit" class="btn btn-default">Create</button>

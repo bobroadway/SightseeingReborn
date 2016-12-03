@@ -1,9 +1,6 @@
 package edu.matc.entity;
 
-import edu.matc.util.LocalDateAttributeConverter;
-
 import javax.persistence.*;
-import java.time.LocalDate;
 
 /**
  * Created by Bo on 10/24/2016.
@@ -34,6 +31,16 @@ public class UserRole {
     public UserRole(String userName, String roleName) {
         this.userName = userName;
         this.roleName = roleName;
+    }
+
+    /**
+     * Instantiates a new User with role of registeredUser.
+     *
+     * @param userName  the user_name, primary key
+     */
+    public UserRole(String userName) {
+        this.userName = userName;
+        this.roleName = "registeredUser";
     }
 
     public String getUserName() {

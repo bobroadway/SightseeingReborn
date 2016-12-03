@@ -25,7 +25,10 @@
                 <td>
                     ${sight.created.getMonthValue()}/${sight.created.getDayOfMonth()}/${sight.created.getYear()}<br />
                     <span class="small">at ${sight.created.getHour()}:${sight.created.getMinute()}</span><br />
-                    <span class="text-muted small">by ${sight.userName}</span>
+                    <span class="text-muted small">by ${sight.userName}</span><br />
+                    <c:if test="${sight.userName.equals(pageContext.request.getUserPrincipal().getName())}">
+                        <span class="small"><a href="#">(remove)</a></span>
+                    </c:if>
                 </td>
                 <td>${sight.name}</td>
                 <td>${sight.description}</td>
