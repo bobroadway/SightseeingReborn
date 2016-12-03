@@ -17,7 +17,7 @@
 </div>
 
 <div class="container-fluid">
-    <form class="form-horizontal" id="addUser" action="/addUser" method="post">
+    <form class="form-horizontal" id="createUser" action="/addUser" method="post">
 
         <div class="form-group">
             <label class="sr-only" for="username">Username</label>

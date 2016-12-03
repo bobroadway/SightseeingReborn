@@ -9,8 +9,37 @@
 <html>
 <%@ include file="templates/head.jsp" %>
 <body class="container-fluid">
-    <h2>This is the Admin Page, only viewable by an admin.</h2>
+
+    <h2>Admin Page for Admins that only an Admin can see if they're an Admin.</h2>
+
+    <div class="container-fluid">
+
+        <table class="table table-condensed table-bordered table-striped">
+            <tr>
+                <th>Action </th>
+                <th>Sight Id </th>
+                <th>Name </th>
+                <th>Added By </th>
+                <th>Date Added </th>
+            </tr>
+            <c:forEach var="sight" items="${allSights}">
+                <tr>
+                    <td>
+                        <a href="#">(remove)</a>
+                    </td>
+                    <td>${sight.id}</td>
+                    <td>${sight.name}</td>
+                    <td>${sight.userName}</td>
+                    <td>${sight.created.getMonthValue()}/${sight.created.getDayOfMonth()}/${sight.created.getYear()}</td>
+                </tr>
+            </c:forEach>
+        </table>
+
+    </div>
+
     <a href="/home">Home</a>
+
 <%@ include file="templates/footer.jsp" %>
+
 </body>
 </html>

@@ -27,7 +27,7 @@
                     <span class="small">at ${sight.created.getHour()}:${sight.created.getMinute()}</span><br />
                     <span class="text-muted small">by ${sight.userName}</span><br />
                     <c:if test="${sight.userName.equals(pageContext.request.getUserPrincipal().getName())}">
-                        <a href="#">Remove</a>
+                        <span class="small"><a href="#">(remove)</a></span>
                     </c:if>
                 </td>
                 <td>${sight.name}</td>
