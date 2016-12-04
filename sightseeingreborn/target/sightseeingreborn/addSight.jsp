@@ -17,7 +17,7 @@
 </div>
 
 <div class="container-fluid">
-    <form class="form-horizontal" id="addSight" action="/insertSight" method="post">
+    <form class="form-horizontal" id="addSight" action="/insertSight" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label for="name" class="col-sm-2 control-label">Name</label>
             <div class="col-sm-8">
@@ -58,7 +58,7 @@
         <div class="form-group">
             <label for="screenshot" class="col-sm-2 control-label">Upload Screenshot</label>
             <div class="col-sm-8">
-                <input type="file" id="screenshot">
+                <input type="file" id="screenshot" name="screenshot">
                 <p class="help-block">Share your sight with a screenshot!</p>
             </div>
         </div>

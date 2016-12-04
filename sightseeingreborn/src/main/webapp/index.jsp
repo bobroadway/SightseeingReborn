@@ -48,14 +48,12 @@
                 <td>
                     <c:choose>
                         <c:when test="${not empty sight.ssUrl}">
-                            <img class="preview"
-                                 src="uploads/${sight.ssUrl}"
-                                 alt="Image for Sight ${sight.id}"
-                                 data-lightbox="${sight.id}"
-                                 data-title="${sight.name}">
+                            <a href="uploads/${sight.ssUrl}" data-lightbox="sights" data-title="${sight.name} - ${sight.zone.name}">
+                                <img class="preview" src="uploads/${sight.ssUrl}" alt="Image for Sight ${sight.id}">
+                            </a>
                         </c:when>
                         <c:otherwise>
-                            <img src="images/previewUnavailable.png" alt="Preview Unavailable">
+                            <img class="preview" src="images/previewUnavailable.png" alt="Preview Unavailable">
                         </c:otherwise>
                     </c:choose>
                 </td>
@@ -68,6 +66,6 @@
 <%@ include file="templates/footer.jsp" %>
 
 
-<script src="js/lightbox.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
 </body>
 </html>
