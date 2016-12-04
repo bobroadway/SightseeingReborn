@@ -135,7 +135,5 @@ public class InsertSight extends HttpServlet {
             log.error(e);
         }
 
-
-
     }
 }

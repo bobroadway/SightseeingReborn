@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3529ec25-f7a8-4a42-a43a-c4512afa9756" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/matc/service/InsertSight.class" afterPath="$PROJECT_DIR$/target/classes/edu/matc/service/InsertSight.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn.war" afterPath="$PROJECT_DIR$/target/sightseeingreborn.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/edu/matc/service/InsertSight.class" afterPath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/edu/matc/service/InsertSight.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/sightseeingreborn_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/sightseeingreborn_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyAppLog.log" afterPath="$PROJECT_DIR$/MyAppLog.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sightseeingreborn.iml" afterPath="$PROJECT_DIR$/sightseeingreborn.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/service/InsertSight.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/service/InsertSight.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/addSight.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/addSight.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/templates/footer.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/templates/footer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/META-INF/maven/edu.matc.sightseeingreborn/sightseeingreborn/pom.properties" afterPath="$PROJECT_DIR$/target/sightseeingreborn/META-INF/maven/edu.matc.sightseeingreborn/sightseeingreborn/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/META-INF/maven/edu.matc.sightseeingreborn/sightseeingreborn/pom.xml" afterPath="$PROJECT_DIR$/target/sightseeingreborn/META-INF/maven/edu.matc.sightseeingreborn/sightseeingreborn/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/addSight.jsp" afterPath="$PROJECT_DIR$/target/sightseeingreborn/addSight.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/index.jsp" afterPath="$PROJECT_DIR$/target/sightseeingreborn/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/templates/footer.jsp" afterPath="$PROJECT_DIR$/target/sightseeingreborn/templates/footer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.SightDaoTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.SightDaoTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.UserDaoTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.UserDaoTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.UserRoleDaoTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.UserRoleDaoTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.ZoneDaoTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.ZoneDaoTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/edu.matc.persistence.SightDaoTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.matc.persistence.SightDaoTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/edu.matc.persistence.UserDaoTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.matc.persistence.UserDaoTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/edu.matc.persistence.UserRoleDaoTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.matc.persistence.UserRoleDaoTest.txt" />
     </list>
     <ignored path="sightseeingreborn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InsertSight.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InsertSight.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/service/InsertSight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="87" column="49" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
+            <state relative-caret-position="527">
+              <caret line="31" column="65" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,17 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addSight.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="addSight.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/addSight.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-68">
@@ -1004,7 +968,7 @@
       <workItem from="1480016373168" duration="19279000" />
       <workItem from="1480271123749" duration="5027000" />
       <workItem from="1480280038368" duration="7235000" />
-      <workItem from="1480553084394" duration="29286000" />
+      <workItem from="1480553084394" duration="29541000" />
     </task>
     <servers />
   </component>
@@ -1041,7 +1005,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119534000" />
+    <option name="totallyTimeSpent" value="119789000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="745" extended-state="0" />
@@ -1511,14 +1475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/addSight.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -1529,11 +1485,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/service/InsertSight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="87" column="49" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
+        <state relative-caret-position="527">
+          <caret line="31" column="65" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/addSight.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
