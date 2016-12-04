@@ -45,7 +45,16 @@
                         Z: ${sight.cordZ}
                     </c:if>
                 </td>
-                <td><img class="preview" src="uploads/${sight.ssUrl}" alt="Image for Sight ${sight.id}"></td>
+                <td>
+                    <c:choose>
+                        <c:when test="${not empty sight.ssUrl}">
+                            <img class="preview" src="uploads/${sight.ssUrl}" alt="Image for Sight ${sight.id}">
+                        </c:when>
+                        <c:otherwise>
+                            <img class="preview" src="images/previewUnavailable.png" alt="Preview Unavailable">
+                        </c:otherwise>
+                    </c:choose>
+                </td>
             </tr>
         </c:forEach>
     </table>
