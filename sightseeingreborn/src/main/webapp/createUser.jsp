@@ -21,15 +21,15 @@
 
         <div class="form-group">
             <label class="sr-only" for="username">Username</label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Username" maxlength="25" required>
         </div>
         <div class="form-group">
             <label class="sr-only" for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password" maxlength="25" required>
         </div>
         <div class="form-group">
             <label class="sr-only" for="confirmPassword">Confirm Password</label>
-            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" maxlength="25" required>
         </div>
 
         <button type="submit" class="btn btn-default">Create</button>

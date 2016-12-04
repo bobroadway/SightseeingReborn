@@ -21,17 +21,17 @@
         <div class="form-group">
             <label for="name" class="col-sm-2 control-label">Name</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name" maxlength="25" required>
             </div>
         </div>
         <div class="form-group">
             <label for="description" class="col-sm-2 control-label">Description</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="description" name="description" placeholder="Description">
+                <input type="text" class="form-control" id="description" name="description" placeholder="Description" maxlength="140" >
             </div>
         </div>
         <div class="form-group">
-            <label for="zoneName" class="col-sm-2 control-label">Zone</label>
+            <label for="zone" class="col-sm-2 control-label">Zone</label>
             <div class="col-sm-8">
                 <select id="zone" name="zone" class="form-control" required>
                     <c:forEach var="zone" items="${allZones}">

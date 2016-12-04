@@ -25,7 +25,10 @@
             <c:forEach var="sight" items="${allSights}">
                 <tr>
                     <td>
-                        <a href="#">(remove)</a>
+                        <form class="form-horizontal" id="adminDelete" action="/deleteSight" method="get">
+                            <input type="hidden" name="sightId" value="${sight.id}">
+                            <button type="submit" class="btn btn-danger btn-xs">Remove</button>
+                        </form>
                     </td>
                     <td>${sight.id}</td>
                     <td>${sight.name}</td>

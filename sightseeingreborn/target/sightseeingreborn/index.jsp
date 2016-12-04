@@ -27,7 +27,7 @@
                     <span class="small">at ${sight.created.getHour()}:${sight.created.getMinute()}</span><br />
                     <span class="text-muted small">by ${sight.userName}</span><br />
                     <c:if test="${sight.userName.equals(pageContext.request.getUserPrincipal().getName())}">
-                        <span class="small"><a href="#">(remove)</a></span>
+                        <a href="/deleteSight?sightId=${sight.id}">(remove)</a>
                     </c:if>
                 </td>
                 <td>${sight.name}</td>
@@ -48,10 +48,14 @@
                 <td>
                     <c:choose>
                         <c:when test="${not empty sight.ssUrl}">
-                            <img class="preview" src="uploads/${sight.ssUrl}" alt="Image for Sight ${sight.id}">
+                            <img class="preview"
+                                 src="uploads/${sight.ssUrl}"
+                                 alt="Image for Sight ${sight.id}"
+                                 data-lightbox="${sight.id}"
+                                 data-title="${sight.name}">
                         </c:when>
                         <c:otherwise>
-                            <img class="preview" src="images/previewUnavailable.png" alt="Preview Unavailable">
+                            <img src="images/previewUnavailable.png" alt="Preview Unavailable">
                         </c:otherwise>
                     </c:choose>
                 </td>
@@ -62,5 +66,8 @@
 </div>
 
 <%@ include file="templates/footer.jsp" %>
+
+
+<script src="js/lightbox.js"></script>
 </body>
 </html>
