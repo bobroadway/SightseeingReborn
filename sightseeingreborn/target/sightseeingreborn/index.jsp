@@ -48,8 +48,8 @@
                 <td>
                     <c:choose>
                         <c:when test="${not empty sight.ssUrl}">
-                            <a href="uploads/${sight.ssUrl}" data-lightbox="sights" data-title="${sight.name} - ${sight.zone.name}">
-                                <img class="preview" src="uploads/${sight.ssUrl}" alt="Image for Sight ${sight.id}">
+                            <a href="/sightImage/${sight.id}" data-lightbox="sights" data-title="${sight.name} - ${sight.zone.name}">
+                                <img class="preview" src="/sightImage/${sight.id}" alt="Image for Sight ${sight.id}">
                             </a>
                         </c:when>
                         <c:otherwise>

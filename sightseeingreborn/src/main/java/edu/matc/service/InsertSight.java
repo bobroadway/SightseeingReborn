@@ -58,8 +58,7 @@ public class InsertSight extends HttpServlet {
         String fileName       = null;
         boolean fileIsPresent = false;
 
-        final String UPLOAD_DIRECTORY = "C:\\Users\\Bo\\Dropbox\\School\\MadJavaEnt\\EnterpriseRepos\\SightseeingReborn\\sightseeingreborn\\src\\main\\webapp\\uploads";
-
+        final String UPLOAD_DIRECTORY = "C:\\Users\\Bo\\SSRUploads";
         try {
             List<FileItem> multiparts = new ServletFileUpload(new DiskFileItemFactory()).parseRequest(request);
 

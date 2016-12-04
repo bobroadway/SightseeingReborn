@@ -42,3 +42,4 @@
 |12/2|Code Review for Paige and pushed all pending presentation feedbacks|2||
 |12/3|Added "Create Login" functionality, added to admin page, delete buttons are in place but no functionality yet|2||
 |12/3|Added "Add Sight" functionality and all "Delete Sight" functionality, added picture viewing jQuery and file upload functionality|6||
+|12/4|Fixed image upload issue|1||
