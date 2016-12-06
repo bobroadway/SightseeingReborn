@@ -1,45 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3529ec25-f7a8-4a42-a43a-c4512afa9756" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/matc/entity/Sight.class" afterPath="$PROJECT_DIR$/target/classes/edu/matc/entity/Sight.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/matc/entity/User.class" afterPath="$PROJECT_DIR$/target/classes/edu/matc/entity/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/matc/entity/UserRole.class" afterPath="$PROJECT_DIR$/target/classes/edu/matc/entity/UserRole.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/matc/entity/Zone.class" afterPath="$PROJECT_DIR$/target/classes/edu/matc/entity/Zone.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/matc/persistence/SightDao.class" afterPath="$PROJECT_DIR$/target/classes/edu/matc/persistence/SightDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/matc/persistence/UserDao.class" afterPath="$PROJECT_DIR$/target/classes/edu/matc/persistence/UserDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/matc/persistence/ZoneDao.class" afterPath="$PROJECT_DIR$/target/classes/edu/matc/persistence/ZoneDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn.war" afterPath="$PROJECT_DIR$/target/sightseeingreborn.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/edu/matc/entity/Sight.class" afterPath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/edu/matc/entity/Sight.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/edu/matc/entity/User.class" afterPath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/edu/matc/entity/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/edu/matc/entity/UserRole.class" afterPath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/edu/matc/entity/UserRole.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/edu/matc/entity/Zone.class" afterPath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/edu/matc/entity/Zone.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/edu/matc/persistence/SightDao.class" afterPath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/edu/matc/persistence/SightDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/edu/matc/persistence/UserDao.class" afterPath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/edu/matc/persistence/UserDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/edu/matc/persistence/ZoneDao.class" afterPath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/edu/matc/persistence/ZoneDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyAppLog.log" afterPath="$PROJECT_DIR$/MyAppLog.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/entity/Sight.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/entity/Sight.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/entity/UserRole.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/entity/UserRole.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/entity/Zone.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/entity/Zone.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/SightDao.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/SightDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/ZoneDao.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/ZoneDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/ssr.properties" afterPath="$PROJECT_DIR$/src/main/resources/ssr.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ssr.properties" afterPath="$PROJECT_DIR$/target/classes/ssr.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/META-INF/maven/edu.matc.sightseeingreborn/sightseeingreborn/pom.properties" afterPath="$PROJECT_DIR$/target/sightseeingreborn/META-INF/maven/edu.matc.sightseeingreborn/sightseeingreborn/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/ssr.properties" afterPath="$PROJECT_DIR$/target/sightseeingreborn/WEB-INF/classes/ssr.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.SightDaoTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.SightDaoTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.UserDaoTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.UserDaoTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.UserRoleDaoTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.UserRoleDaoTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.ZoneDaoTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.matc.persistence.ZoneDaoTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/edu.matc.persistence.SightDaoTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.matc.persistence.SightDaoTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/edu.matc.persistence.UserDaoTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.matc.persistence.UserDaoTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/edu.matc.persistence.UserRoleDaoTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.matc.persistence.UserRoleDaoTest.txt" />
-    </list>
+    <list default="true" id="3529ec25-f7a8-4a42-a43a-c4512afa9756" name="Default" comment="" />
     <ignored path="sightseeingreborn.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -953,7 +915,7 @@
       <workItem from="1480271123749" duration="5027000" />
       <workItem from="1480280038368" duration="7235000" />
       <workItem from="1480553084394" duration="33942000" />
-      <workItem from="1480987193727" duration="12795000" />
+      <workItem from="1480987193727" duration="13366000" />
     </task>
     <servers />
   </component>
@@ -990,7 +952,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136985000" />
+    <option name="totallyTimeSpent" value="137556000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1370" height="745" extended-state="0" />
