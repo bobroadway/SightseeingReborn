@@ -2,7 +2,9 @@ package edu.matc.service;
 
 import java.io.*;
 import java.util.List;
+import java.util.Properties;
 
+import edu.matc.util.Utilities;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -20,7 +22,7 @@ import edu.matc.persistence.SightDao;
 import edu.matc.persistence.ZoneDao;
 
 /**
- * Service to Insert a Sight.
+ * Service to insert a sight to the SIGHT table.
  * Created on 12/3/16
  * @author Bo Broadway
  */
@@ -30,6 +32,7 @@ import edu.matc.persistence.ZoneDao;
 )
 public class InsertSight extends HttpServlet {
     private final Logger log = Logger.getLogger(this.getClass());
+    private Properties properties = Utilities.loadProperties("ssr.properties");
 
     /**
      * The doPost method for InsertSight. Receives input from form and returns the response.
@@ -58,16 +61,23 @@ public class InsertSight extends HttpServlet {
         String fileName       = null;
         boolean fileIsPresent = false;
 
-        final String UPLOAD_DIRECTORY = "C:\\Users\\Bo\\SSRUploads";
+        // upload directory constant for image upload
+        final String UPLOAD_DIRECTORY = properties.getProperty("uploadDirectory");
         try {
+            // get form parts
             List<FileItem> multiparts = new ServletFileUpload(new DiskFileItemFactory()).parseRequest(request);
 
+            // loop through form parts
             for(FileItem item : multiparts){
+
+                // normal form field
                 if (item.isFormField()){
+
+                    // form field variables
                     String fieldName = item.getFieldName();
                     String fieldValue = item.getString();
 
-                    // switch statement for required fields
+                    // switch statement to assign required fields
                     switch (fieldName) {
                         case "name": name = fieldValue;
                             log.info("Name: " + fieldValue);
@@ -83,48 +93,54 @@ public class InsertSight extends HttpServlet {
                             break;
                         default: break;
                     }
+
+                    // if statements to assign non-required fields
                     if (fieldName.equals("description") && !fieldValue.equals("")) {
                         description = fieldValue;
                     }
                     if (fieldName.equals("zCord") && !fieldValue.equals("")) {
                         cordZ = Integer.parseInt(fieldValue);
                     }
+
+                // file form part
                 } else {
+
+                    // file flag
                     fileIsPresent = true;
 
                     // concatenate epoch time to front of original name for uniqueness;
                     fileName = Long.toString(System.currentTimeMillis()) + "_" + new File(item.getName()).getName();
                     log.info("File Name: " + fileName);
 
+                    // write the file to the upload directory
                     item.write( new File(UPLOAD_DIRECTORY + File.separator + fileName));
                     log.info("File: " + fileName + " uploaded.");
                 }
+
             }
 
             // instantiate sight with required field variables
             Sight sight = new Sight(zoneDao.getZone(zoneId), name, cordX, cordY, request.getUserPrincipal().getName());
 
-            // assign optional description
+            // assign optional description to sight object
             if (description != null) {
                 log.info("Description is present: " + description);
                 sight.setDescription(description);
             }
 
-            // assign optional zCord
+            // assign optional zCord to sight object
             if (cordZ != null) {
                 log.info("Z Cord is present: " + cordZ);
                 sight.setCordZ(cordZ);
             }
 
-            // assign ssUrl if there was a file uploaded
+            // assign ssUrl to sight object if there was a file uploaded
             if (fileIsPresent) {
                 log.info("File is present: " + fileName);
                 sight.setSsUrl(fileName);
             }
 
-            log.info("Sight: " + sight);
-
-            // add sight to database
+            // add sight to SIGHT table
             sightDao.addSight(sight);
             log.info("Sight: " + sight.getName() + " successfully created.");
 
@@ -135,4 +151,5 @@ public class InsertSight extends HttpServlet {
         }
 
     }
+
 }

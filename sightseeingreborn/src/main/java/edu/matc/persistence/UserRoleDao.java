@@ -6,15 +6,16 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 /**
- * Created by Bo on 12/3/2016.
+ * Dao used for CRUD operations of the USER_ROLE table. Without the U.
+ * Created on 12/3/16
+ * @author Bo Broadway
  */
 public class UserRoleDao {
 
     private final Logger log = Logger.getLogger(this.getClass());
 
     /**
-     * retrieve a userRole given their id
-     *
+     * retrieve a userRole by userName
      * @param userName the userName
      * @return userRole
      */
@@ -27,8 +28,7 @@ public class UserRoleDao {
 
     /**
      * add a userRole
-     *
-     * @param userRole
+     * @param userRole a userRole object
      * @return the userName of the inserted userRole
      */
     public String addUserRole(UserRole userRole) {
@@ -41,8 +41,8 @@ public class UserRoleDao {
     }
 
     /**
-     * delete a userRole by id
-     * @param userName the userRole's username
+     * delete a userRole by userName
+     * @param userName the userRole's userName
      */
     public void deleteUserRole(String userName) {
         log.info("In deleteUserRole()");

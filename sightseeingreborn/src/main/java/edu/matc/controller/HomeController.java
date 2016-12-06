@@ -2,7 +2,7 @@ package edu.matc.controller;
 
 import edu.matc.entity.Sight;
 import edu.matc.persistence.SightDao;
-import edu.matc.persistence.ZoneDao;
+import edu.matc.util.Utilities;
 import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
 /**
  * Home page controller.
@@ -25,9 +26,10 @@ import java.util.List;
 )
 public class HomeController extends HttpServlet {
     private final Logger log = Logger.getLogger(this.getClass());
+    private Properties properties = Utilities.loadProperties("ssr.properties");
 
     /**
-     * The do get method for the Home controller. Receives input from form and returns the response.
+     * The doGet method for the Home controller. Receives input from form and returns the response.
      * @param request request received
      * @param response response to send
      * @throws ServletException
@@ -48,7 +50,8 @@ public class HomeController extends HttpServlet {
         request.setAttribute("allSights", allSights);
 
         // forward to index.jsp
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
+        String indexJsp = properties.getProperty("indexJsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher(indexJsp);
         dispatcher.forward(request, response);
     }
 }

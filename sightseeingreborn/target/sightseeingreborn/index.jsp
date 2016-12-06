@@ -1,3 +1,8 @@
+<!--
+  HOME PAGE for Sightseeing Reborn
+  Author: Bo Broadway
+-->
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html>
@@ -10,8 +15,13 @@
 
 <div class="container-fluid">
 
+    <!-- Heading -->
     <h3>The Sights of Eorzea</h3>
+
+    <!-- All Sights Table -->
     <table class="table table-striped">
+
+        <!-- Header Row -->
         <tr>
             <th>Date Added</th>
             <th>Name</th>
@@ -20,8 +30,12 @@
             <th>Coordinates</th>
             <th>Screenshot</th>
         </tr>
+
+        <!-- Sight Records Row(s) -->
         <c:forEach var="sight" items="${allSights}">
             <tr>
+
+                <!-- MM/DD/YYYY at 00:00 by USER [conditional: (remove)] -->
                 <td>
                     ${sight.created.getMonthValue()}/${sight.created.getDayOfMonth()}/${sight.created.getYear()}<br />
                     <span class="small">at ${sight.created.getHour()}:${sight.created.getMinute()}</span><br />
@@ -30,14 +44,22 @@
                         <a href="/deleteSight?sightId=${sight.id}">(remove)</a>
                     </c:if>
                 </td>
+
+                <!-- Name -->
                 <td>${sight.name}</td>
+
+                <!-- Description -->
                 <td>${sight.description}</td>
+
+                <!-- Zone Name, Region, Expansion -->
                 <td>
                     ${sight.zone.name}<br />
                     <span class="text-muted small">${sight.zone.region}<br />
                     <span class="text-muted small">(${sight.zone.expansion})</span>
                     </span>
                 </td>
+
+                <!-- X: __, Y: __, Z: __ -->
                 <td>
                     X: ${sight.cordX}<br />
                     Y: ${sight.cordY}<br />
@@ -45,6 +67,8 @@
                         Z: ${sight.cordZ}
                     </c:if>
                 </td>
+
+                <!-- Screenshot -->
                 <td>
                     <c:choose>
                         <c:when test="${not empty sight.ssUrl}">
@@ -64,8 +88,6 @@
 </div>
 
 <%@ include file="templates/footer.jsp" %>
-
-
 <script type="text/javascript" src="js/lightbox.js"></script>
 </body>
 </html>

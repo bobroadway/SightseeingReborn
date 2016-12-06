@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Home page controller.
+ * Service to delete a sight from the SIGHT table.
  * Created on 11/24/16
  * @author Bo Broadway
  */
@@ -23,7 +23,7 @@ public class DeleteSight extends HttpServlet {
     private final Logger log = Logger.getLogger(this.getClass());
 
     /**
-     * The do get method for the Home controller. Receives input from form and returns the response.
+     * The doGet method for DeleteSight. Receives input from form and returns the response.
      * @param request request received
      * @param response response to send
      * @throws ServletException
@@ -40,9 +40,9 @@ public class DeleteSight extends HttpServlet {
         log.info("Sight to delete: " + dao.getSight(Integer.parseInt(request.getParameter("sightId"))).getName());
         dao.deleteSight(Integer.parseInt(request.getParameter("sightId")));
 
-        // redirect
+        // redirect to referer as a sight can be deleted from /admin or /index
         log.info("Redirecting to: " + request.getHeader("referer"));
         response.sendRedirect(request.getHeader("referer"));
-
     }
+
 }

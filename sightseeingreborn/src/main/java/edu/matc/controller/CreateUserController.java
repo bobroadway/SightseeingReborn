@@ -1,5 +1,6 @@
 package edu.matc.controller;
 
+import edu.matc.util.Utilities;
 import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Properties;
 
 /**
  * Create User page controller.
@@ -21,9 +23,10 @@ import java.io.IOException;
 )
 public class CreateUserController extends HttpServlet {
     private final Logger log = Logger.getLogger(this.getClass());
+    private Properties properties = Utilities.loadProperties("ssr.properties");
 
     /**
-     * The do get method for the createUser controller. Receives input from form and returns the response.
+     * The doGet method for the CreateUser controller. Receives input from form and returns the response.
      * @param request request received
      * @param response response to send
      * @throws ServletException
@@ -37,7 +40,8 @@ public class CreateUserController extends HttpServlet {
         request.setAttribute("title", "Create Login");
 
         // forward to createUser.jsp
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/createUser.jsp");
+        String createUserJsp = properties.getProperty("createUserJsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher(createUserJsp);
         dispatcher.forward(request, response);
     }
 }

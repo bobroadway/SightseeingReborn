@@ -11,7 +11,9 @@ import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by Bo on 10/30/2016.
+ * ZoneDaoTest
+ * Created on 10/30/2016
+ * @author Bo Broadway
  */
 public class ZoneDaoTest {
     private final Logger log = Logger.getLogger(this.getClass());

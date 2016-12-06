@@ -6,15 +6,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Properties;
 
 import edu.matc.entity.User;
 import edu.matc.entity.UserRole;
 import edu.matc.persistence.UserDao;
 import edu.matc.persistence.UserRoleDao;
+import edu.matc.util.Utilities;
 import org.apache.log4j.Logger;
 
 /**
- * Home page controller.
+ * Service to add a user to the USER table.
  * Created on 11/24/16
  * @author Bo Broadway
  */
@@ -24,9 +26,10 @@ import org.apache.log4j.Logger;
 )
 public class AddUser extends HttpServlet {
     private final Logger log = Logger.getLogger(this.getClass());
+    private Properties properties = Utilities.loadProperties("ssr.properties");
 
     /**
-     * The do get method for the Home controller. Receives input from form and returns the response.
+     * The doGet method for the Home controller. Receives input from form and returns the response.
      * @param request request received
      * @param response response to send
      * @throws ServletException
@@ -36,46 +39,49 @@ public class AddUser extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         log.info("In AddUser doPost method.");
 
-        // declare variables
+        // Daos for USER and USER_ROLE
         UserDao userDao = new UserDao();
         UserRoleDao userRoleDao = new UserRoleDao();
 
-        String username = request.getParameter("username");
+        // assign user variables
+        String userName = request.getParameter("username");
         String password = request.getParameter("password");
         String confirmPassword = request.getParameter("confirmPassword");
-        log.info(username + " " + password + " " + confirmPassword);
+        log.info(userName + " | " + password + " | " + confirmPassword);
 
-        User user = new User(username, password);
-        UserRole userRole = new UserRole(username);
+        // instantiate new User and UserRole for the user
+        User user = new User(userName, password);
+        UserRole userRole = new UserRole(userName);
 
         // add user to database
-        if (username != null && password != null && confirmPassword != null
-                && password.equals(confirmPassword) && !username.equals(userDao.getUser(username))) {
+        if (password.equals(confirmPassword) && (userDao.getUser(userName) == null)) {
+
+            // add user to USER table and USER_ROLE table
             userDao.addUser(user);
             userRoleDao.addUserRole(userRole);
-            log.info("User: " + username + " created.");
+            log.info("User: " + userName + " created.");
 
             // log in
             try {
-                request.login(username, password);
-                log.info("Created User: " + username + " now logged in.");
+                request.login(userName, password);
+                log.info("Created User: " + userName + " now logged in.");
 
-                // redirect
-                response.sendRedirect("/home");
+                // redirect to home
+                String home = properties.getProperty("home");
+                response.sendRedirect(home);
             } catch (ServletException e) {
                 log.error(e);
 
-                // redirect
-                response.sendRedirect("/login_error.jsp");
+                // redirect to login_error
+                String loginErrorJsp = properties.getProperty("loginErrorJsp");
+                response.sendRedirect(loginErrorJsp);
             }
 
         } else {
             log.info("Passwords: " + password + " v. " + confirmPassword);
-            log.info("User exists: " + username.equals(userDao.getUser(username)));
+            log.info("User exists: " + userName.equals(userDao.getUser(userName).getUserName()));
         }
 
-
-
-
     }
+
 }

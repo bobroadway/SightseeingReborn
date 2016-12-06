@@ -11,7 +11,9 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /**
- * Created by Bo on 10/29/2016.
+ * SightDaoTest
+ * Created on 10/29/2016
+ * @author Bo Broadway
  */
 public class SightDaoTest {
     private final Logger log = Logger.getLogger(this.getClass());

@@ -9,14 +9,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Bo on 10/2/2016.
+ * Dao used for CRUD operations of the SIGHT table.
+ * Created on 10/2/16
+ * @author Bo Broadway
  */
 public class SightDao {
-
     private final Logger log = Logger.getLogger(this.getClass());
 
-    /** Return a list of all sights
-     *
+    /**
+     * Return a list of all sights
      * @return All sights
      */
     public List<Sight> getAllSights() {
@@ -24,12 +25,12 @@ public class SightDao {
         List<Sight> sights = new ArrayList<Sight>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         sights = session.createCriteria(Sight.class).list();
+        session.close();
         return sights;
     }
 
     /**
-     * retrieve a sight given its id
-     *
+     * retrieve a sight by id
      * @param id the sight's id
      * @return sight
      */
@@ -37,13 +38,13 @@ public class SightDao {
         log.info("In getSight()");
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Sight sight = (Sight) session.get(Sight.class, id);
+        session.close();
         return sight;
     }
 
     /**
      * add a sight
-     *
-     * @param sight
+     * @param sight the sight to add
      * @return the id of the inserted record
      */
     public Integer addSight(Sight sight) {
@@ -52,6 +53,7 @@ public class SightDao {
         Transaction tx = session.beginTransaction();
         session.save(sight);
         tx.commit();
+        session.close();
         return sight.getId();
     }
 
@@ -69,6 +71,7 @@ public class SightDao {
         }
         session.flush();
         tx.commit();
+        session.close();
     }
 
     /**
@@ -85,6 +88,7 @@ public class SightDao {
         }
         session.flush();
         tx.commit();
+        session.close();
     }
 
 }

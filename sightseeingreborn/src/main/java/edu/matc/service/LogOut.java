@@ -6,10 +6,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Properties;
+
+import edu.matc.util.Utilities;
 import org.apache.log4j.Logger;
 
 /**
- * Home page controller.
+ * Service to log a user OUT.
  * Created on 11/24/16
  * @author Bo Broadway
  */
@@ -19,9 +22,10 @@ import org.apache.log4j.Logger;
 )
 public class LogOut extends HttpServlet {
     private final Logger log = Logger.getLogger(this.getClass());
+    private Properties properties = Utilities.loadProperties("ssr.properties");
 
     /**
-     * The do get method for the Home controller. Receives input from form and returns the response.
+     * The doGet method for LogOut. Receives input from form and returns the response.
      * @param request request received
      * @param response response to send
      * @throws ServletException
@@ -40,7 +44,8 @@ public class LogOut extends HttpServlet {
             log.error(e);
         }
 
-        // redirect
-        response.sendRedirect("/home");
+        // redirect to home
+        String home = properties.getProperty("home");
+        response.sendRedirect(home);
     }
 }

@@ -1,4 +1,5 @@
 <%--
+  The ADD SIGHT page.
   Created by IntelliJ IDEA.
   User: Bo
   Date: 10/23/2016
@@ -12,24 +13,32 @@
 <%@ include file="templates/header.jsp" %>
 <%@ include file="templates/navigation.jsp" %>
 
+<!-- Heading -->
 <div class="container-fluid">
     <h3 class="sectionTitle">Share Your Sight</h3>
 </div>
 
+<!-- Add Sight Form -->
 <div class="container-fluid">
     <form class="form-horizontal" id="addSight" action="/insertSight" method="post" enctype="multipart/form-data">
+
+        <!-- Name -->
         <div class="form-group">
             <label for="name" class="col-sm-2 control-label">Name</label>
             <div class="col-sm-8">
                 <input type="text" class="form-control" id="name" name="name" placeholder="Name" maxlength="25" required>
             </div>
         </div>
+
+        <!-- Description -->
         <div class="form-group">
             <label for="description" class="col-sm-2 control-label">Description</label>
             <div class="col-sm-8">
                 <input type="text" class="form-control" id="description" name="description" placeholder="Description" maxlength="140" >
             </div>
         </div>
+
+        <!-- Zone -->
         <div class="form-group">
             <label for="zone" class="col-sm-2 control-label">Zone</label>
             <div class="col-sm-8">
@@ -40,6 +49,8 @@
                 </select>
             </div>
         </div>
+
+        <!-- Coordinates -->
         <div class="form-group">
             <label for="coordinates" class="col-sm-2 control-label">Coordinates</label>
             <div class="row" id="coordinates">
@@ -55,6 +66,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Upload Screenshot -->
         <div class="form-group">
             <label for="screenshot" class="col-sm-2 control-label">Upload Screenshot</label>
             <div class="col-sm-8">
@@ -62,6 +75,8 @@
                 <p class="help-block">Share your sight with a screenshot!</p>
             </div>
         </div>
+
+        <!-- Submit Button -->
         <div class="form-group center">
             <button type="submit" class="btn btn-default">Submit</button>
         </div>

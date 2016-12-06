@@ -10,7 +10,9 @@ import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by Bo on 12/3/2016.
+ * UserRoleDaoTest
+ * Created on 12/3/16
+ * @author Bo Broadway
  */
 public class UserRoleDaoTest {
     private final Logger log = Logger.getLogger(this.getClass());

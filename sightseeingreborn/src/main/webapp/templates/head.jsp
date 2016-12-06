@@ -1,4 +1,5 @@
 <%--
+  HEAD info for Sightseeing Reborn
   Created by IntelliJ IDEA.
   User: Bo
   Date: 10/10/2016

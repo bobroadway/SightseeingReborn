@@ -6,27 +6,33 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
 /**
- * Created by Bo on 10/2/2016.
+ * Session Factory Provider class for implementing Hibernate.
+ * Created on 10/2/16
+ * @author Bo Broadway
  */
 public class SessionFactoryProvider {
 
     private static SessionFactory sessionFactory;
 
+    /**
+     * Method to create a SessionFactory.
+     */
     public static void createSessionFactory() {
-
         Configuration configuration = new Configuration();
         configuration.configure();
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
-
         sessionFactory = configuration.buildSessionFactory(serviceRegistry);
     }
 
+    /**
+     * Getter for SessionFactory.
+     * @return a sessionFactory
+     */
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             createSessionFactory();
         }
         return sessionFactory;
-
     }
 
 }

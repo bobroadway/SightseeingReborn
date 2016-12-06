@@ -1,6 +1,7 @@
 package edu.matc.controller;
 
 import edu.matc.persistence.SightDao;
+import edu.matc.util.Utilities;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -8,14 +9,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Properties;
 
 /**
- * Sight Image Controller.
+ * Sight Image Controller. This servlet serves up an image from the uploads directory, taking the sightId of the image
+ * as "parameter" from the path.
  * Created on 12/4/16
  * @author Bo Broadway
  */
@@ -25,6 +27,7 @@ import java.nio.file.Paths;
 )
 public class SightImageController extends HttpServlet {
     private final Logger log = Logger.getLogger(this.getClass());
+    private Properties properties = Utilities.loadProperties("ssr.properties");
 
     /**
      * The doGet method for SightImageController. Receives input from form and returns the response.
@@ -37,30 +40,26 @@ public class SightImageController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         log.info("In Sight Image doGet method.");
 
-        final String UPLOAD_DIRECTORY = "C:\\Users\\Bo\\SSRUploads";
+        final String UPLOAD_DIRECTORY = properties.getProperty("uploadDirectory");
         SightDao dao = new SightDao();
 
         // get sightId from the url
         String pathInfo = request.getPathInfo();
-        log.info("pathInfo: " + pathInfo);
         String[] pathParts = pathInfo.split("/");
         Integer sightId = Integer.parseInt(pathParts[1]);
-        log.info("sightId: " + sightId);
 
         // get file name from sight table
         String sightImageName = dao.getSight(sightId).getSsUrl();
-        log.info("sightImageName: " + sightImageName);
 
         // create path
         Path sightImagePath = Paths.get(UPLOAD_DIRECTORY, sightImageName);
-        log.info("File Exists: " + Files.exists(sightImagePath));
 
         // set content type
         response.setContentType(Files.probeContentType(sightImagePath));
-        log.info("Content Type: " + Files.probeContentType(sightImagePath));
 
         // write image path to outputstream
         Files.copy(sightImagePath, response.getOutputStream());
+        log.info("Sight Image Name: " + sightImageName);
 
     }
 

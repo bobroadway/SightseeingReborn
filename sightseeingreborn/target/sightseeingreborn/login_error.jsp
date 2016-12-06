@@ -1,4 +1,5 @@
 <%--
+  LOGIN_ERROR for Form Based Authentication.
   Created by IntelliJ IDEA.
   User: Bo
   Date: 11/24/2016
@@ -11,6 +12,8 @@
     <title>Login Failed</title>
 </head>
 <body>
+
+<!-- Log In Failed Message -->
 <div class="container-fluid">
     <h2>Login Failed. <a href="/home" >Get me out of here!</a></h2>
 </div>

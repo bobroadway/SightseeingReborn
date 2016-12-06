@@ -2,6 +2,7 @@ package edu.matc.controller;
 
 import edu.matc.entity.Sight;
 import edu.matc.persistence.SightDao;
+import edu.matc.util.Utilities;
 import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
 /**
  * Admin page controller.
@@ -24,9 +26,10 @@ import java.util.List;
 )
 public class AdminController extends HttpServlet {
     private final Logger log = Logger.getLogger(this.getClass());
+    private Properties properties = Utilities.loadProperties("ssr.properties");
 
     /**
-     * The do get method for the Admin controller. Receives input from form and returns the response.
+     * The doGet method for the Admin controller. Receives input from form and returns the response.
      * @param request request received
      * @param response response to send
      * @throws ServletException
@@ -46,8 +49,9 @@ public class AdminController extends HttpServlet {
         // place allSights into request
         request.setAttribute("allSights", allSights);
 
-        // forward to index.jsp
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/admin.jsp");
+        // forward to admin.jsp
+        String adminJsp = properties.getProperty("adminJsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher(adminJsp);
         dispatcher.forward(request, response);
     }
 }

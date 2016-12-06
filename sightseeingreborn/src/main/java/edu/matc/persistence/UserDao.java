@@ -9,14 +9,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Bo on 10/2/16.
+ * Dao used for CRUD operations of the USER table.
+ * Created on 10/2/16
+ * @author Bo Broadway
  */
 public class UserDao {
-
     private final Logger log = Logger.getLogger(this.getClass());
 
-    /** Return a list of all users
-     *
+    /**
+     * Return a list of all users
      * @return All users
      */
     public List<User> getAllUsers() {
@@ -24,12 +25,12 @@ public class UserDao {
         List<User> users = new ArrayList<User>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         users = session.createCriteria(User.class).list();
+        session.close();
         return users;
     }
 
     /**
-     * retrieve a user given their id
-     *
+     * retrieve a user by userName
      * @param userName the userName
      * @return user
      */
@@ -37,13 +38,13 @@ public class UserDao {
         log.info("In getUser()");
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         User user = (User) session.get(User.class, userName);
+        session.close();
         return user;
     }
 
     /**
      * add a user
-     *
-     * @param user
+     * @param user a user object
      * @return the id of the inserted record
      */
     public String addUser(User user) {
@@ -52,12 +53,13 @@ public class UserDao {
         Transaction tx = session.beginTransaction();
         session.save(user);
         tx.commit();
+        session.close();
         return user.getUserName();
     }
 
     /**
-     * delete a user by id
-     * @param userName the user's username
+     * delete a user by userName
+     * @param userName the user's userName
      */
     public void deleteUser(String userName) {
         log.info("In deleteUser()");
@@ -68,6 +70,7 @@ public class UserDao {
             session.delete(user);
         }
         session.flush();
+        session.close();
         tx.commit();
     }
 
@@ -84,6 +87,7 @@ public class UserDao {
             session.merge(user);
         }
         session.flush();
+        session.close();
         tx.commit();
     }
 
