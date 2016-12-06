@@ -24,7 +24,6 @@ public class ZoneDao {
         List<Zone> zones = new ArrayList<Zone>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         zones = session.createCriteria(Zone.class).list();
-        session.close();
         return zones;
     }
 
@@ -37,7 +36,6 @@ public class ZoneDao {
         log.info("In getZone()");
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Zone zone = (Zone) session.get(Zone.class, zoneId);
-        session.close();
         return zone;
     }
 }

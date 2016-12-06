@@ -25,7 +25,6 @@ public class SightDao {
         List<Sight> sights = new ArrayList<Sight>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         sights = session.createCriteria(Sight.class).list();
-        session.close();
         return sights;
     }
 
@@ -38,7 +37,6 @@ public class SightDao {
         log.info("In getSight()");
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Sight sight = (Sight) session.get(Sight.class, id);
-        session.close();
         return sight;
     }
 
@@ -53,7 +51,6 @@ public class SightDao {
         Transaction tx = session.beginTransaction();
         session.save(sight);
         tx.commit();
-        session.close();
         return sight.getId();
     }
 
@@ -71,7 +68,6 @@ public class SightDao {
         }
         session.flush();
         tx.commit();
-        session.close();
     }
 
     /**
@@ -88,7 +84,6 @@ public class SightDao {
         }
         session.flush();
         tx.commit();
-        session.close();
     }
 
 }

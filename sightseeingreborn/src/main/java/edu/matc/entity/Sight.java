@@ -65,6 +65,7 @@ public class Sight {
      * @param userName    userName for sight uploader
      */
     public Sight(Zone zone, String name, Integer cordX, Integer cordY, String userName) {
+        this();
         this.zone = zone;
         this.name = name;
         this.cordX = cordX;

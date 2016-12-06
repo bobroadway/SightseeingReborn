@@ -25,7 +25,6 @@ public class UserDao {
         List<User> users = new ArrayList<User>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         users = session.createCriteria(User.class).list();
-        session.close();
         return users;
     }
 
@@ -38,7 +37,6 @@ public class UserDao {
         log.info("In getUser()");
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         User user = (User) session.get(User.class, userName);
-        session.close();
         return user;
     }
 
@@ -53,7 +51,6 @@ public class UserDao {
         Transaction tx = session.beginTransaction();
         session.save(user);
         tx.commit();
-        session.close();
         return user.getUserName();
     }
 
@@ -70,7 +67,6 @@ public class UserDao {
             session.delete(user);
         }
         session.flush();
-        session.close();
         tx.commit();
     }
 
@@ -87,7 +83,6 @@ public class UserDao {
             session.merge(user);
         }
         session.flush();
-        session.close();
         tx.commit();
     }
 

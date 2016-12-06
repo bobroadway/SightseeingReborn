@@ -30,6 +30,7 @@ public class UserRole {
      * @param roleName  the role_name
      */
     public UserRole(String userName, String roleName) {
+        this();
         this.userName = userName;
         this.roleName = roleName;
     }
@@ -39,6 +40,7 @@ public class UserRole {
      * @param userName  the user_name, primary key
      */
     public UserRole(String userName) {
+        this();
         this.userName = userName;
         this.roleName = "registeredUser";
     }

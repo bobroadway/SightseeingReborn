@@ -38,6 +38,7 @@ public class Zone {
      * @param name       the name of the zone
      */
     public Zone(Integer zoneId, String expansion, String region, String name) {
+        this();
         this.zoneId = zoneId;
         this.expansion = expansion;
         this.region = region;

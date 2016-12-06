@@ -40,6 +40,7 @@ public class User {
      * @param password   the password
      */
     public User(String userName, String password) {
+        this();
         this.userName = userName;
         this.password = password;
     }
