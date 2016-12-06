@@ -19,9 +19,10 @@
     <h3>The Sights of Eorzea</h3>
 
     <!-- All Sights Table -->
-    <table class="table table-striped">
+    <table class="table table-striped sights-table">
 
         <!-- Header Row -->
+        <thead>
         <tr>
             <th>Date Added</th>
             <th>Name</th>
@@ -30,8 +31,22 @@
             <th>Coordinates</th>
             <th>Screenshot</th>
         </tr>
+        </thead>
+
+        <!-- Footer Row -->
+        <tfoot>
+        <tr>
+            <th>Date Added</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Zone</th>
+            <th>Coordinates</th>
+            <th>Screenshot</th>
+        </tr>
+        </tfoot>
 
         <!-- Sight Records Row(s) -->
+        <tbody>
         <c:forEach var="sight" items="${allSights}">
             <tr>
 
@@ -83,6 +98,7 @@
                 </td>
             </tr>
         </c:forEach>
+        </tbody>
     </table>
 
 </div>

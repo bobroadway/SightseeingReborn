@@ -17,9 +17,10 @@
 <div class="container-fluid">
 
     <!-- Sights Table for Admin Actions -->
-    <table class="table table-condensed table-bordered table-striped">
+    <table class="table table-condensed table-bordered table-striped sights-table">
 
         <!-- Header Row -->
+        <thead>
         <tr>
             <th>Action </th>
             <th>Sight Id </th>
@@ -27,8 +28,21 @@
             <th>Added By </th>
             <th>Date Added </th>
         </tr>
+        </thead>
+
+        <!-- Footer Row -->
+        <tfoot>
+        <tr>
+            <th>Action </th>
+            <th>Sight Id </th>
+            <th>Name </th>
+            <th>Added By </th>
+            <th>Date Added </th>
+        </tr>
+        </tfoot>
 
         <!-- Sight Records Row(s) -->
+        <tbody>
         <c:forEach var="sight" items="${allSights}">
             <tr>
                 <td>
@@ -43,6 +57,7 @@
                 <td>${sight.created.getMonthValue()}/${sight.created.getDayOfMonth()}/${sight.created.getYear()}</td>
             </tr>
         </c:forEach>
+        </tbody>
     </table>
 
 </div>
