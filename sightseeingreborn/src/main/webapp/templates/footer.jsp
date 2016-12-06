@@ -12,7 +12,7 @@
 <div class="container-fluid">
     <hr />
     <div class="container-fluid">
-        <p>Created By Bo Broadway</p>
+        <p>Created By Bo Broadway | <a href="${pageContext.request.contextPath}/javadoc/">View JavaDoc</a></p>
     </div>
 </div>
 
