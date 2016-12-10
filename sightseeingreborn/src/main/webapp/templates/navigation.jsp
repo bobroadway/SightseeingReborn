@@ -18,7 +18,7 @@
 
                 <!-- Add Sight -->
                 <c:if test="${pageContext.request.isUserInRole('registeredUser')}">
-                    <li><a href="/addSight">Add Sight</a></li>
+                    <li><a href="${pageContext.request.contextPath}/addSight">Add Sight</a></li>
                 </c:if>
 
                 <!-- External Links -->
