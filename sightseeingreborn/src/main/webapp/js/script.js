@@ -8,19 +8,19 @@ $(document).ready(function() {
     // confirm password validation for createUser.jsp
     $('#submitNewUser').prop('disabled', true);
     $('.passwordMatch').keyup(function(){
-        console.log('username: ' + $('#user').val());
-        console.log('password: ' + $('#firstPassword').val());
+        console.log('username: ' + $('#newUsername').val());
+        console.log('password: ' + $('#newPassword').val());
         console.log('confirm: ' + $('#confirmPassword').val());
 
-        if ($('#firstPassword').val() != "" && $('#confirmPassword').val() != ""
-            && $('#firstPassword').val() == $('#confirmPassword').val()) {
+        if ($('#newPassword').val() != "" && $('#confirmPassword').val() != ""
+            && $('#newPassword').val() == $('#confirmPassword').val()) {
 
-            console.log('password: [ ' + $('#firstPassword').val() + ' ] == confirm: [ ' + $('#confirmPassword').val() + ' ] :: enabled');
+            console.log('password: [ ' + $('#newPassword').val() + ' ] == confirm: [ ' + $('#confirmPassword').val() + ' ] :: enabled');
             $('#submitNewUser').prop('disabled', false);
 
         } else {
 
-            console.log('password: [ ' + $('#firstPassword').val() + ' ] != confirm: [ ' + $('#confirmPassword').val() + ' ] :: disabled');
+            console.log('password: [ ' + $('#newPassword').val() + ' ] != confirm: [ ' + $('#confirmPassword').val() + ' ] :: disabled');
             $('#submitNewUser').prop('disabled', true);
 
         }

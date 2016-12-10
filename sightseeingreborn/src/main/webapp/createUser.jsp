@@ -24,14 +24,14 @@
 
         <!-- UserName -->
         <div class="form-group">
-            <label class="sr-only" for="user">Username</label>
-            <input type="text" class="form-control" id="user" name="username" placeholder="Username" maxlength="25" required>
+            <label class="sr-only" for="newUsername">Username</label>
+            <input type="text" class="form-control" id="newUsername" name="newUsername" placeholder="Username" maxlength="25" required>
         </div>
 
         <!-- Password -->
         <div class="form-group">
-            <label class="sr-only" for="firstPassword">Password</label>
-            <input type="password" class="form-control passwordMatch" id="firstPassword" name="password" placeholder="Password" maxlength="25" required>
+            <label class="sr-only" for="newPassword">Password</label>
+            <input type="password" class="form-control passwordMatch" id="newPassword" name="newPassword" placeholder="Password" maxlength="25" required>
         </div>
 
         <!-- Confirm Password -->

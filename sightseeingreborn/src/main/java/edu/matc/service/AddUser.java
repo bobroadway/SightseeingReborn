@@ -44,8 +44,8 @@ public class AddUser extends HttpServlet {
         UserRoleDao userRoleDao = new UserRoleDao();
 
         // assign user variables
-        String userName = request.getParameter("username");
-        String password = request.getParameter("password");
+        String userName = request.getParameter("newUsername");
+        String password = request.getParameter("newPassword");
         String confirmPassword = request.getParameter("confirmPassword");
         log.info(userName + " | " + password + " | " + confirmPassword);
 
