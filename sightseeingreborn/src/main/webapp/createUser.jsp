@@ -24,24 +24,24 @@
 
         <!-- UserName -->
         <div class="form-group">
-            <label class="sr-only" for="username">Username</label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="Username" maxlength="25" required>
+            <label class="sr-only" for="user">Username</label>
+            <input type="text" class="form-control" id="user" name="username" placeholder="Username" maxlength="25" required>
         </div>
 
         <!-- Password -->
         <div class="form-group">
-            <label class="sr-only" for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="Password" maxlength="25" required>
+            <label class="sr-only" for="firstPassword">Password</label>
+            <input type="password" class="form-control passwordMatch" id="firstPassword" name="password" placeholder="Password" maxlength="25" required>
         </div>
 
         <!-- Confirm Password -->
         <div class="form-group">
             <label class="sr-only" for="confirmPassword">Confirm Password</label>
-            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" maxlength="25" required>
+            <input type="password" class="form-control passwordMatch"  id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" maxlength="25" required>
         </div>
 
         <!-- Create Button -->
-        <button type="submit" class="btn btn-default">Create</button>
+        <button id="submitNewUser" type="submit" class="btn btn-default">Create</button>
 
     </form>
 </div>

@@ -56,13 +56,13 @@
             <div class="row" id="coordinates">
 
                 <div class="col-xs-1">
-                    <input type="text" name="xCord" class="form-control" placeholder="X" required>
+                    <input type="text" name="xCord" class="form-control" placeholder="X" maxlength="2" required>
                 </div>
                 <div class="col-xs-1">
-                    <input type="text" name="yCord" class="form-control" placeholder="Y" required>
+                    <input type="text" name="yCord" class="form-control" placeholder="Y" maxlength="2" required>
                 </div>
                 <div class="col-xs-1">
-                    <input type="text" name="zCord" class="form-control" placeholder="Z">
+                    <input type="text" name="zCord" class="form-control" placeholder="Z" maxlength="2">
                 </div>
             </div>
         </div>

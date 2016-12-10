@@ -79,7 +79,7 @@ public class AddUser extends HttpServlet {
 
         } else {
             log.info("Passwords: " + password + " v. " + confirmPassword);
-            log.info("User exists: " + userName.equals(userDao.getUser(userName).getUserName()));
+            log.info("User exists: " + (userDao.getUser(userName) == null));
         }
 
     }
