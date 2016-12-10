@@ -20,7 +20,7 @@
 
 <!-- Create User Form -->
 <div class="container-fluid">
-    <form class="form-horizontal" id="createUser" action="/addUser" method="post">
+    <form class="form-horizontal" id="createUser" action="${pageContext.request.contextPath}/addUser" method="post">
 
         <!-- UserName -->
         <div class="form-group">

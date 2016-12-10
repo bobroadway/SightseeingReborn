@@ -45,3 +45,4 @@
 |12/4|Fixed image upload issue|1||
 |12/5|Documentation, Properties file, JavaDoc|4||
 |12/6|Messing with Digital Ocean and getting absolutely nowhere|6||
+|12/7|Digital Ocean deploy and fixing bugs|4||

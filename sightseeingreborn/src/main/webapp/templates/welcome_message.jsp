@@ -10,5 +10,5 @@
 <!-- Welcome, User! -->
 <div class="container-fluid">
     <h3>Welcome, <c:out value="${pageContext.request.getUserPrincipal().getName()}" default="Sightseeing Reborn" />!</h3>
-    <a href="/logOut">Log Out</a>
+    <a href="${pageContext.request.contextPath}/logOut">Log Out</a>
 </div>

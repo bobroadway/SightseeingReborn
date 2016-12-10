@@ -13,7 +13,7 @@
     <div class="container-fluid">
         <ul>
             <!-- Home -->
-            <a class="navbar-brand" href="/home">Home</a>
+            <a class="navbar-brand" href="${pageContext.request.contextPath}/home">Home</a>
             <ul class="nav navbar-nav">
 
                 <!-- Add Sight -->

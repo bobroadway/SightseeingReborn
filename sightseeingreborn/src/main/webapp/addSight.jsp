@@ -20,7 +20,7 @@
 
 <!-- Add Sight Form -->
 <div class="container-fluid">
-    <form class="form-horizontal" id="addSight" action="/insertSight" method="post" enctype="multipart/form-data">
+    <form class="form-horizontal" id="addSight" action="${pageContext.request.contextPath}/insertSight" method="post" enctype="multipart/form-data">
 
         <!-- Name -->
         <div class="form-group">

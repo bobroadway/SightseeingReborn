@@ -56,7 +56,7 @@
                     <span class="small">at ${sight.created.getHour()}:${sight.created.getMinute()}</span><br />
                     <span class="text-muted small">by ${sight.userName}</span><br />
                     <c:if test="${sight.userName.equals(pageContext.request.getUserPrincipal().getName())}">
-                        <a href="/deleteSight?sightId=${sight.id}">(remove)</a>
+                        <a href="${pageContext.request.contextPath}/deleteSight?sightId=${sight.id}">(remove)</a>
                     </c:if>
                 </td>
 
@@ -87,8 +87,8 @@
                 <td>
                     <c:choose>
                         <c:when test="${not empty sight.ssUrl}">
-                            <a href="/sightImage/${sight.id}" data-lightbox="sights" data-title="${sight.name} - ${sight.zone.name}">
-                                <img class="preview" src="/sightImage/${sight.id}" alt="Image for Sight ${sight.id}">
+                            <a href="${pageContext.request.contextPath}/sightImage/${sight.id}" data-lightbox="sights" data-title="${sight.name} - ${sight.zone.name}">
+                                <img class="preview" src="${pageContext.request.contextPath}/sightImage/${sight.id}" alt="Image for Sight ${sight.id}">
                             </a>
                         </c:when>
                         <c:otherwise>

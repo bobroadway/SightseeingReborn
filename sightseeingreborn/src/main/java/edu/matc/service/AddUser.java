@@ -68,7 +68,7 @@ public class AddUser extends HttpServlet {
 
                 // redirect to home
                 String home = properties.getProperty("home");
-                response.sendRedirect(home);
+                response.sendRedirect(request.getContextPath() + home);
             } catch (ServletException e) {
                 log.error(e);
 

@@ -1,5 +1,6 @@
 package edu.matc.service;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -46,13 +47,13 @@ public class LogIn extends HttpServlet {
 
             // redirect to home
             String home = properties.getProperty("home");
-            response.sendRedirect(home);
+            response.sendRedirect(request.getContextPath() + home);
         } catch (ServletException e) {
             log.error(e);
 
             // redirect to login_error
             String loginErrorJsp = properties.getProperty("loginErrorJsp");
-            response.sendRedirect(loginErrorJsp);
+            response.sendRedirect(request.getContextPath() + loginErrorJsp);
         }
 
     }

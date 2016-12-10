@@ -7,6 +7,7 @@ import java.util.Properties;
 import edu.matc.util.Utilities;
 import org.apache.log4j.Logger;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -144,8 +145,10 @@ public class InsertSight extends HttpServlet {
             sightDao.addSight(sight);
             log.info("Sight: " + sight.getName() + " successfully created.");
 
-            // redirect
-            response.sendRedirect("/home");
+            // redirect to home
+            String home = properties.getProperty("home");
+            response.sendRedirect(request.getContextPath() + home);
+
         } catch (Exception e) {
             log.error(e);
         }

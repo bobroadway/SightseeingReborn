@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!-- Login Form -->
 <div class="container-fluid">
-  <form class="form-inline" action="/logIn" method="post">
+  <form class="form-inline" action="${pageContext.request.contextPath}/logIn" method="post">
 
       <!-- UserName -->
       <div class="form-group">
@@ -28,6 +28,6 @@
     <br />
 
     <!-- Create Login -->
-    <a href="/createUser">Create Login</a>
+    <a href="${pageContext.request.contextPath}/createUser">Create Login</a>
   </form>
 </div>

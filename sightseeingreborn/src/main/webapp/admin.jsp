@@ -46,7 +46,7 @@
         <c:forEach var="sight" items="${allSights}">
             <tr>
                 <td>
-                    <form class="form-horizontal" id="adminDelete" action="/deleteSight" method="get">
+                    <form class="form-horizontal" id="adminDelete" action="${pageContext.request.contextPath}/deleteSight" method="get">
                         <input type="hidden" name="sightId" value="${sight.id}">
                         <button type="submit" class="btn btn-danger btn-xs">Remove</button>
                     </form>
@@ -63,7 +63,7 @@
 </div>
 
 <!-- Link to Home Page -->
-<a href="/home">Home</a>
+<a href="${pageContext.request.contextPath}/home">Home</a>
 
 <%@ include file="templates/footer.jsp" %>
 </body>

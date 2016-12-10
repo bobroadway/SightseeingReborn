@@ -15,7 +15,7 @@
 
 <!-- Log In Failed Message -->
 <div class="container-fluid">
-    <h2>Login Failed. <a href="/home" >Get me out of here!</a></h2>
+    <h2>Login Failed. <a href="${pageContext.request.contextPath}/home" >Get me out of here!</a></h2>
 </div>
 </body>
 </html>
